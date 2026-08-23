@@ -1,0 +1,260 @@
+Stepz:
+
+d:
+cd D:\fy_proj\mixture_of_recursions
+conda activate mor
+set HF_TOKEN=hf_your_token
+
+****************/ MOR  Base model Evaluation command/*************************
+set LM_EVAL_DISABLE_BOOTSTRAP=1
+set HYDRA_FULL_ERROR=1 & set CUDA_VISIBLE_DEVICES=0 & accelerate launch --config_file acc_configs/single_gpu_config.yaml --main_process_port 23393 eval_fewshot.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+
+
+****************/ MOR Scheduling model Evaluation command/*************************
+set LM_EVAL_DISABLE_BOOTSTRAP=1
+set HYDRA_FULL_ERROR=1 & set CUDA_VISIBLE_DEVICES=0 & accelerate launch --config_file acc_configs/single_gpu_config.yaml --main_process_port 23393 eval_fewshot.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001 +model.pretrained_model_name_or_path="D:/fy_proj/mixture_of_recursions/results/pretrain/my_mor_run/checkpoint-14672"
+
+****************/ Rec3 Scheduling model Training command/*************************
+accelerate launch --config_file acc_configs/single_gpu_config.yaml pretrain.py --config-name baseline_scheduler
+accelerate launch --config_file acc_configs/single_gpu_config.yaml pretrain.py --config-name recursion_scheduler
+
+/******************** Used for creating a config file for vanilla scheduler training ******************/
+python util/generate_pretrain_eval_fewshot_configs.py --name 250720_pretrain_smollm-360m_vanilla_lr3e-3_scheduler
+
+
+/**********************Vanilla model Scheduler Training Command using the config file created**********************************/
+set HYDRA_FULL_ERROR=1
+accelerate launch --config_file acc_configs/single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_schedulerst
+
+/**********************Vanilla model Quiz Training Command using the config file created**********************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_vanilla_lr3e-3_quiz
+
+set HYDRA_FULL_ERROR=1
+set CUDA_VISIBLE_DEVICES=0 
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_quiz
+ 
+/**********************Vanilla model Quiz Training Command using the config file created**********************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_vanilla_lr3e-3_quiz
+
+set HYDRA_FULL_ERROR=1
+set CUDA_VISIBLE_DEVICES=0 
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_quiz 
+
+/*********************MoR model Quiz *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_quiz
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_quiz
+/*********************Recursion model Quiz **********************(In progress)*********/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_quiz 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_quiz 
+
+/*********************MoR model Orchestrator *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator 
+
+set HYDRA_FULL_ERROR=1
+set CUDA_VISIBLE_DEVICES=0 
+accelerate launch --config_file acc_configs\single_gpu_config.yaml --main_process_port 23393 eval_fewshot.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator
+
+python eval_orchestrator.py
+
+/**********************************CREATING A SECOND TRAINING MODEL FOR ORCHESTRATION - MOR**********************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestratoR_v2
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v2 
+
+python eval_orchestrator.py
+
+/**********************************CREATING A Third TRAINING MODEL FOR ORCHESTRATION - MOR**********************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v3
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v3 
+
+python eval_orchestrator.py
+/**********************************CREATING A Fourth TRAINING MODEL FOR ORCHESTRATION - MOR**********************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4 
+
+python eval_orchestrator.py
+
+
+/*********************Recursion model Orchestrator *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4 
+/*********************Vanilla model Orchestrator *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator_v4 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator_v4 
+/*********************MoR model Pedagogy *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_pedagogy 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_pedagogy 
+/*********************Recursion model Pedagogy *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_pedagogy
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_pedagogy 
+/*********************Vanilla model Pedagogy *******************************/
+python util\generate_pretrain_eval_fewshot_configs.py  --name 250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy 
+
+accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy 
+
+
+python run_all_pretrains.py
+
+
+(mor) D:\fy_proj\mixture_of_recursions>set HYDRA_FULL_ERROR=1 & set CUDA_VISIBLE_DEVICES=0 & accelerate launch --config_file acc_configs/single_gpu_config.yaml --main_process_port 23393 eval_fewshot.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Automatically determining batch size based on `total\\\\\\\_batch\\\\\\\_size`
+total_batch_size              : 1024 (given)
+torch.cuda.device_count()     : 1
+per_device_train_batch_size   : 16 (given)
+gradient_accumulation_steps   : 64 (computed)
+actual total batch size       : 1024
+Setting wandb_run_name: 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+Setting output_dir  : 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+No checkpoint directories found matching D:\fy_proj\mixture_of_recursions\results\pretrain\250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001\checkpoint-*
+D:\fy_proj\mixture_of_recursions\util\config.py:95: UserWarning: stop_steps (14161) is not divisible by save_steps (1416)
+  warnings.warn(warning)
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+---
+[2025-12-17 10:04:29,742][lm-eval][INFO] - Verbosity set to INFO
+Preparing evaluation of Recursive Transformer
+Loading model from pretrained weights...
+Loading model with flash_attention_2...
+[2025-12-17 10:05:03,743][lm-eval][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2025-12-17 10:05:03,743][lm-eval][INFO] - Using model type 'default'
+[2025-12-17 10:05:03,751][lm-eval][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2025-12-17 10:05:10,657][lm-eval][INFO] - Passed `--trust\\\\\\\_remote\\\\\\\_code`, setting environment variable `HF\\\\\\\_DATASETS\\\\\\\_TRUST\\\\\\\_REMOTE\\\\\\\_CODE=true`
+[2025-12-17 10:05:10,657][lm-eval][INFO] - Selected Tasks: ['arc_challenge', 'arc_easy', 'hellaswag', 'lambada_openai', 'mmlu', 'mmlu_continuation', 'openbookqa', 'piqa', 'winogrande']
+[2025-12-17 10:05:10,721][lm-eval][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2025-12-17 10:05:10,721][lm-eval][INFO] - Using pre-initialized model
+[2025-12-17 10:06:20,862][lm-eval][WARNING] - [Task: lambada_openai] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+[2025-12-17 10:06:20,862][lm-eval][WARNING] - [Task: lambada_openai] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "D:\fy_proj\mixture_of_recursions\eval_fewshot.py", line 527, in <module>
+    main()
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\main.py", line 94, in decorated_main
+    _run_hydra(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\utils.py", line 394, in _run_hydra
+    _run_app(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\utils.py", line 457, in _run_app
+    run_and_report(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\utils.py", line 223, in run_and_report
+    raise ex
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\utils.py", line 220, in run_and_report
+    return func()
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py", line 132, in run
+    _ = ret.return_value
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\core\utils.py", line 260, in return_value
+    raise self._return_value
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\core\utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "D:\fy_proj\mixture_of_recursions\eval_fewshot.py", line 98, in main
+    evaluate_model(cfg, eval_logger, writer)
+  File "D:\fy_proj\mixture_of_recursions\eval_fewshot.py", line 379, in evaluate_model
+    results = evaluator.simple_evaluate(
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\utils.py", line 397, in _wrapper
+    return fn(*args, **kwargs)
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\evaluator.py", line 235, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager)
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 618, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 414, in load_task_or_group
+    collections.ChainMap(*map(self._load_individual_task_or_group, task_list))
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 398, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 398, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 314, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\tasks\__init__.py", line 280, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\api\task.py", line 818, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "D:\fy_proj\mixture_of_recursions\lm_eval\api\task.py", line 934, in download
+    self.dataset = datasets.load_dataset(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 1512, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 1496, in dataset_module_factory
+    ).get_module()
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 1081, in get_module
+    builder_configs, default_config_name = create_builder_configs_from_metadata_configs(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\load.py", line 559, in create_builder_configs_from_metadata_configs
+    config_data_files_dict = DataFilesDict.from_patterns(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\data_files.py", line 674, in from_patterns
+    DataFilesList.from_patterns(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\data_files.py", line 589, in from_patterns
+    origin_metadata = _get_origin_metadata(data_files, download_config=download_config)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\data_files.py", line 504, in _get_origin_metadata
+    return thread_map(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\tqdm\contrib\concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\tqdm\contrib\concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "C:\Users\Students\.conda\envs\mor\lib\concurrent\futures\_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "C:\Users\Students\.conda\envs\mor\lib\concurrent\futures\_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "C:\Users\Students\.conda\envs\mor\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\Students\.conda\envs\mor\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\Students\.conda\envs\mor\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\datasets\data_files.py", line 484, in _get_single_origin_metadata
+    resolved_path = fs.resolve_path(data_file)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\hf_file_system.py", line 198, in resolve_path
+    repo_and_revision_exist, err = self._repo_and_revision_exist(repo_type, repo_id, revision)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\hf_file_system.py", line 125, in _repo_and_revision_exist
+    self._api.repo_info(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\hf_api.py", line 2807, in repo_info
+    return method(
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\hf_api.py", line 2664, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\requests\adapters.py", line 690, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: c98332ed-1bee-4670-8ad9-68193d689c2e)')
+Traceback (most recent call last):
+  File "C:\Users\Students\.conda\envs\mor\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Students\.conda\envs\mor\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Students\.conda\envs\mor\Scripts\accelerate.exe\__main__.py", line 6, in <module>
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\accelerate\commands\accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\accelerate\commands\launch.py", line 1281, in launch_command
+    simple_launcher(args)
+  File "C:\Users\Students\.conda\envs\mor\lib\site-packages\accelerate\commands\launch.py", line 869, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['C:\\Users\\Students\\.conda\\envs\\mor\\python.exe', 'eval_fewshot.py', '--config-name', '250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001']' returned non-zero exit status 1.
