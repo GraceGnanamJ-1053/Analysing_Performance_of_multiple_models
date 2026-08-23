@@ -1,0 +1,103 @@
+Vanilla Orchestrator Training Agent Logs
+(mor) D:\fy_proj\mixture_of_recursions>accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator
+D:\fy_proj\mixture_of_recursions\pretrain.py:30: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/pretrain", config_name="yymmdd_pretrain")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Automatically determining batch size based on `total_batch_size`
+total_batch_size              : 256 (given)
+torch.cuda.device_count()     : 1
+per_device_train_batch_size   : 4 (given)
+gradient_accumulation_steps   : 64 (computed)
+actual total batch size       : 256
+Setting wandb_run_name: 250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator
+Setting output_dir  : 250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator
+Found checkpoint directories: ['D:\\fy_proj\\mixture_of_recursions\\results\\pretrain\\250720_pretrain_smollm-360m_vanilla_lr3e-3_orchestrator\\checkpoint-12']
+D:\fy_proj\mixture_of_recursions\util\config.py:76: UserWarning: Resume from latest checkpoint. If you want to train from scratch, please delete the checkpoint directory.
+  warnings.warn("Resume from latest checkpoint. If you want to train from scratch, please delete the checkpoint directory.")
+D:\fy_proj\mixture_of_recursions\util\config.py:80: UserWarning: num_warmup_steps not found in config, setting to 5% of num_train_steps
+  warnings.warn(warning)
+D:\fy_proj\mixture_of_recursions\util\config.py:87: UserWarning: save_interval (0.25) will be used instead of save_steps (10)
+  warnings.warn(warning)
+D:\fy_proj\mixture_of_recursions\util\config.py:95: UserWarning: stop_steps (50) is not divisible by save_steps (12)
+  warnings.warn(warning)
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+--------------------------------------------------------------------------------
+Loading tokenizers...
+Loading dataset...
+Loading models...
+Initializing model from scratch...
+trainable params: 361,821,120 || all params: 361,821,120 || relaxation params: 0 || trainable%: 100.0000
+C:\Users\Students\.conda\envs\mor\lib\site-packages\torch\nn\modules\module.py:1329: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id SeQHIhcy.
+wandb: Tracking run with wandb version 0.23.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\fy_proj\mixture_of_recursions\outputs\2026-01-28\09-10-56\wandb\offline-run-20260128_091122-SeQHIhcy
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+{'loss': 4.5404, 'grad_norm': 2.171875, 'learning_rate': 0.003, 'epoch': 0.26}
+{'loss': 4.4778, 'grad_norm': 1.2109375, 'learning_rate': 0.003, 'epoch': 0.28}
+{'loss': 4.4835, 'grad_norm': 2.84375, 'learning_rate': 0.003, 'epoch': 0.3}
+{'loss': 4.5318, 'grad_norm': 2.109375, 'learning_rate': 0.003, 'epoch': 0.32}
+{'loss': 4.4918, 'grad_norm': 1.3359375, 'learning_rate': 0.003, 'epoch': 0.34}
+{'loss': 4.4644, 'grad_norm': 1.484375, 'learning_rate': 0.003, 'epoch': 0.36}
+{'loss': 4.4814, 'grad_norm': 1.3125, 'learning_rate': 0.003, 'epoch': 0.38}
+{'loss': 4.4663, 'grad_norm': 1.5390625, 'learning_rate': 0.003, 'epoch': 0.4}
+{'loss': 4.4567, 'grad_norm': 1.0625, 'learning_rate': 0.003, 'epoch': 0.42}
+{'loss': 4.4554, 'grad_norm': 1.171875, 'learning_rate': 0.003, 'epoch': 0.44}
+{'loss': 4.4531, 'grad_norm': 1.1875, 'learning_rate': 0.003, 'epoch': 0.46}
+{'loss': 4.4411, 'grad_norm': 0.7890625, 'learning_rate': 0.003, 'epoch': 0.48}
+{'loss': 4.4419, 'grad_norm': 1.1953125, 'learning_rate': 0.003, 'epoch': 0.5}
+{'loss': 4.4363, 'grad_norm': 0.78515625, 'learning_rate': 0.003, 'epoch': 0.52}
+{'loss': 4.441, 'grad_norm': 1.09375, 'learning_rate': 0.003, 'epoch': 0.54}
+{'loss': 4.4386, 'grad_norm': 0.984375, 'learning_rate': 0.003, 'epoch': 0.56}
+{'loss': 4.4297, 'grad_norm': 0.78515625, 'learning_rate': 0.003, 'epoch': 0.58}
+{'loss': 4.4334, 'grad_norm': 1.1875, 'learning_rate': 0.003, 'epoch': 0.6}
+{'loss': 4.43, 'grad_norm': 0.6875, 'learning_rate': 0.003, 'epoch': 0.62}
+{'loss': 4.4299, 'grad_norm': 0.921875, 'learning_rate': 0.003, 'epoch': 0.64}
+{'loss': 4.4258, 'grad_norm': 0.71484375, 'learning_rate': 0.003, 'epoch': 0.66}
+{'loss': 4.4254, 'grad_norm': 0.65625, 'learning_rate': 0.003, 'epoch': 0.68}
+{'loss': 4.4234, 'grad_norm': 0.734375, 'learning_rate': 0.003, 'epoch': 0.7}
+{'loss': 4.4178, 'grad_norm': 0.478515625, 'learning_rate': 0.003, 'epoch': 0.72}
+{'loss': 4.4252, 'grad_norm': 0.80859375, 'learning_rate': 0.003, 'epoch': 0.74}
+{'loss': 4.4214, 'grad_norm': 0.50390625, 'learning_rate': 0.003, 'epoch': 0.76}
+{'loss': 4.4197, 'grad_norm': 0.765625, 'learning_rate': 0.003, 'epoch': 0.78}
+{'loss': 4.4176, 'grad_norm': 0.70703125, 'learning_rate': 0.003, 'epoch': 0.8}
+{'loss': 4.4161, 'grad_norm': 0.4453125, 'learning_rate': 0.003, 'epoch': 0.82}
+{'loss': 4.4155, 'grad_norm': 0.796875, 'learning_rate': 0.003, 'epoch': 0.84}
+{'loss': 4.4118, 'grad_norm': 0.54296875, 'learning_rate': 0.003, 'epoch': 0.86}
+{'loss': 4.4065, 'grad_norm': 0.51953125, 'learning_rate': 0.003, 'epoch': 0.88}
+{'loss': 4.3895, 'grad_norm': 0.7578125, 'learning_rate': 0.003, 'epoch': 0.9}
+{'loss': 4.3584, 'grad_norm': 0.435546875, 'learning_rate': 0.003, 'epoch': 0.92}
+{'loss': 4.3249, 'grad_norm': 0.5546875, 'learning_rate': 0.003, 'epoch': 0.94}
+{'loss': 4.2435, 'grad_norm': 0.5546875, 'learning_rate': 0.003, 'epoch': 0.96}
+{'loss': 4.261, 'grad_norm': 2.65625, 'learning_rate': 0.003, 'epoch': 0.98}
+ 98%|█████████████████████████████████████████████████████████████████████████████▍ | 49/50 [2:36:06<04:17, 257.36s/it]Stopping training at stop_steps=50
+{'loss': 4.0658, 'grad_norm': 2.46875, 'learning_rate': 0.003, 'epoch': 1.0}
+{'train_runtime': 9635.0975, 'train_samples_per_second': 1.328, 'train_steps_per_second': 0.005, 'train_loss': 3.3578781700134277, 'epoch': 1.0}
+100%|███████████████████████████████████████████████████████████████████████████████| 50/50 [2:40:29<00:00, 192.58s/it]
+***** pretrain metrics *****
+  epoch                    =        1.0
+  total_flos               = 46089140GF
+  train_loss               =     3.3579
+  train_runtime            = 2:40:35.09
+  train_samples_per_second =      1.328
+  train_steps_per_second   =      0.005
+wandb:
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync D:\fy_proj\mixture_of_recursions\outputs\2026-01-28\09-10-56\wandb\offline-run-20260128_091122-SeQHIhcy
+wandb: Find logs at: wandb\offline-run-20260128_091122-SeQHIhcy\logs
+
+(mor) D:\fy_proj\mixture_of_recursions>

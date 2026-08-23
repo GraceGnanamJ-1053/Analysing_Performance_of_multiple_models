@@ -1,0 +1,113 @@
+Recursion Scheduling agent Training
+(mor) D:\fy_proj\mixture_of_recursions>accelerate launch ^
+More?   --config_file acc_configs/single_gpu_config.yaml ^
+More?   pretrain.py ^
+More?   model=smollm ^
+More?   dataset=scheduler ^
+More?   recursive.enable=true ^
+More?   recursive.num_recursion=3 ^
+More?   mor.enable=false ^
+More?   precision=bf16 ^
+More?   per_device_train_batch_size=2 ^
+More?   gradient_accumulation_steps=8 ^
+More?   total_batch_size=null ^
+More?   learning_rate=3e-4 ^
+More?   num_train_steps=3000 ^
+More?   num_warmup_steps=150 ^
+More?   +save_strategy=steps ^
+More?   +save_steps=500 ^
+More?   name=recursion_scheduler
+D:\fy_proj\mixture_of_recursions\pretrain.py:30: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/pretrain", config_name="yymmdd_pretrain")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Setting wandb_run_name: recursion_scheduler
+Setting output_dir  : recursion_scheduler
+No checkpoint directories found matching D:\fy_proj\mixture_of_recursions\results\pretrain\recursion_scheduler\checkpoint-*
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+--------------------------------------------------------------------------------
+Loading tokenizers...
+Loading dataset...
+Loading models...
+Loading model from pretrained weights...
+Loading model with flash_attention_2...
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at D:/fy_proj/mixture_of_recursions/checkpoints/250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001 and are newly initialized: ['model.layers.1.input_layernorm.weight', 'model.layers.1.mlp.down_proj.weight', 'model.layers.1.mlp.gate_proj.weight', 'model.layers.1.mlp.up_proj.weight', 'model.layers.1.post_attention_layernorm.weight', 'model.layers.1.self_attn.k_proj.weight', 'model.layers.1.self_attn.o_proj.weight', 'model.layers.1.self_attn.q_proj.weight', 'model.layers.1.self_attn.v_proj.weight', 'model.layers.10.input_layernorm.weight', 'model.layers.10.mlp.down_proj.weight', 'model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.10.post_attention_layernorm.weight', 'model.layers.10.self_attn.k_proj.weight', 'model.layers.10.self_attn.o_proj.weight', 'model.layers.10.self_attn.q_proj.weight', 'model.layers.10.self_attn.v_proj.weight', 'model.layers.11.input_layernorm.weight', 'model.layers.11.mlp.down_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight', 'model.layers.11.post_attention_layernorm.weight', 'model.layers.11.self_attn.k_proj.weight', 'model.layers.11.self_attn.o_proj.weight', 'model.layers.11.self_attn.q_proj.weight', 'model.layers.11.self_attn.v_proj.weight', 'model.layers.12.input_layernorm.weight', 'model.layers.12.mlp.down_proj.weight', 'model.layers.12.mlp.gate_proj.weight', 'model.layers.12.mlp.up_proj.weight', 'model.layers.12.post_attention_layernorm.weight', 'model.layers.12.self_attn.k_proj.weight', 'model.layers.12.self_attn.o_proj.weight', 'model.layers.12.self_attn.q_proj.weight', 'model.layers.12.self_attn.v_proj.weight', 'model.layers.13.input_layernorm.weight', 'model.layers.13.mlp.down_proj.weight', 'model.layers.13.mlp.gate_proj.weight', 'model.layers.13.mlp.up_proj.weight', 'model.layers.13.post_attention_layernorm.weight', 'model.layers.13.self_attn.k_proj.weight', 'model.layers.13.self_attn.o_proj.weight', 'model.layers.13.self_attn.q_proj.weight', 'model.layers.13.self_attn.v_proj.weight', 'model.layers.14.input_layernorm.weight', 'model.layers.14.mlp.down_proj.weight', 'model.layers.14.mlp.gate_proj.weight', 'model.layers.14.mlp.up_proj.weight', 'model.layers.14.post_attention_layernorm.weight', 'model.layers.14.self_attn.k_proj.weight', 'model.layers.14.self_attn.o_proj.weight', 'model.layers.14.self_attn.q_proj.weight', 'model.layers.14.self_attn.v_proj.weight', 'model.layers.15.input_layernorm.weight', 'model.layers.15.mlp.down_proj.weight', 'model.layers.15.mlp.gate_proj.weight', 'model.layers.15.mlp.up_proj.weight', 'model.layers.15.post_attention_layernorm.weight', 'model.layers.15.self_attn.k_proj.weight', 'model.layers.15.self_attn.o_proj.weight', 'model.layers.15.self_attn.q_proj.weight', 'model.layers.15.self_attn.v_proj.weight', 'model.layers.16.input_layernorm.weight', 'model.layers.16.mlp.down_proj.weight', 'model.layers.16.mlp.gate_proj.weight', 'model.layers.16.mlp.up_proj.weight', 'model.layers.16.post_attention_layernorm.weight', 'model.layers.16.self_attn.k_proj.weight', 'model.layers.16.self_attn.o_proj.weight', 'model.layers.16.self_attn.q_proj.weight', 'model.layers.16.self_attn.v_proj.weight', 'model.layers.17.input_layernorm.weight', 'model.layers.17.mlp.down_proj.weight', 'model.layers.17.mlp.gate_proj.weight', 'model.layers.17.mlp.up_proj.weight', 'model.layers.17.post_attention_layernorm.weight', 'model.layers.17.self_attn.k_proj.weight', 'model.layers.17.self_attn.o_proj.weight', 'model.layers.17.self_attn.q_proj.weight', 'model.layers.17.self_attn.v_proj.weight', 'model.layers.18.input_layernorm.weight', 'model.layers.18.mlp.down_proj.weight', 'model.layers.18.mlp.gate_proj.weight', 'model.layers.18.mlp.up_proj.weight', 'model.layers.18.post_attention_layernorm.weight', 'model.layers.18.self_attn.k_proj.weight', 'model.layers.18.self_attn.o_proj.weight', 'model.layers.18.self_attn.q_proj.weight', 'model.layers.18.self_attn.v_proj.weight', 'model.layers.19.input_layernorm.weight', 'model.layers.19.mlp.down_proj.weight', 'model.layers.19.mlp.gate_proj.weight', 'model.layers.19.mlp.up_proj.weight', 'model.layers.19.post_attention_layernorm.weight', 'model.layers.19.self_attn.k_proj.weight', 'model.layers.19.self_attn.o_proj.weight', 'model.layers.19.self_attn.q_proj.weight', 'model.layers.19.self_attn.v_proj.weight', 'model.layers.2.input_layernorm.weight', 'model.layers.2.mlp.down_proj.weight', 'model.layers.2.mlp.gate_proj.weight', 'model.layers.2.mlp.up_proj.weight', 'model.layers.2.post_attention_layernorm.weight', 'model.layers.2.self_attn.k_proj.weight', 'model.layers.2.self_attn.o_proj.weight', 'model.layers.2.self_attn.q_proj.weight', 'model.layers.2.self_attn.v_proj.weight', 'model.layers.20.input_layernorm.weight', 'model.layers.20.mlp.down_proj.weight', 'model.layers.20.mlp.gate_proj.weight', 'model.layers.20.mlp.up_proj.weight', 'model.layers.20.post_attention_layernorm.weight', 'model.layers.20.self_attn.k_proj.weight', 'model.layers.20.self_attn.o_proj.weight', 'model.layers.20.self_attn.q_proj.weight', 'model.layers.20.self_attn.v_proj.weight', 'model.layers.21.input_layernorm.weight', 'model.layers.21.mlp.down_proj.weight', 'model.layers.21.mlp.gate_proj.weight', 'model.layers.21.mlp.up_proj.weight', 'model.layers.21.post_attention_layernorm.weight', 'model.layers.21.self_attn.k_proj.weight', 'model.layers.21.self_attn.o_proj.weight', 'model.layers.21.self_attn.q_proj.weight', 'model.layers.21.self_attn.v_proj.weight', 'model.layers.22.input_layernorm.weight', 'model.layers.22.mlp.down_proj.weight', 'model.layers.22.mlp.gate_proj.weight', 'model.layers.22.mlp.up_proj.weight', 'model.layers.22.post_attention_layernorm.weight', 'model.layers.22.self_attn.k_proj.weight', 'model.layers.22.self_attn.o_proj.weight', 'model.layers.22.self_attn.q_proj.weight', 'model.layers.22.self_attn.v_proj.weight', 'model.layers.23.input_layernorm.weight', 'model.layers.23.mlp.down_proj.weight', 'model.layers.23.mlp.gate_proj.weight', 'model.layers.23.mlp.up_proj.weight', 'model.layers.23.post_attention_layernorm.weight', 'model.layers.23.self_attn.k_proj.weight', 'model.layers.23.self_attn.o_proj.weight', 'model.layers.23.self_attn.q_proj.weight', 'model.layers.23.self_attn.v_proj.weight', 'model.layers.24.input_layernorm.weight', 'model.layers.24.mlp.down_proj.weight', 'model.layers.24.mlp.gate_proj.weight', 'model.layers.24.mlp.up_proj.weight', 'model.layers.24.post_attention_layernorm.weight', 'model.layers.24.self_attn.k_proj.weight', 'model.layers.24.self_attn.o_proj.weight', 'model.layers.24.self_attn.q_proj.weight', 'model.layers.24.self_attn.v_proj.weight', 'model.layers.25.input_layernorm.weight', 'model.layers.25.mlp.down_proj.weight', 'model.layers.25.mlp.gate_proj.weight', 'model.layers.25.mlp.up_proj.weight', 'model.layers.25.post_attention_layernorm.weight', 'model.layers.25.self_attn.k_proj.weight', 'model.layers.25.self_attn.o_proj.weight', 'model.layers.25.self_attn.q_proj.weight', 'model.layers.25.self_attn.v_proj.weight', 'model.layers.26.input_layernorm.weight', 'model.layers.26.mlp.down_proj.weight', 'model.layers.26.mlp.gate_proj.weight', 'model.layers.26.mlp.up_proj.weight', 'model.layers.26.post_attention_layernorm.weight', 'model.layers.26.self_attn.k_proj.weight', 'model.layers.26.self_attn.o_proj.weight', 'model.layers.26.self_attn.q_proj.weight', 'model.layers.26.self_attn.v_proj.weight', 'model.layers.27.input_layernorm.weight', 'model.layers.27.mlp.down_proj.weight', 'model.layers.27.mlp.gate_proj.weight', 'model.layers.27.mlp.up_proj.weight', 'model.layers.27.post_attention_layernorm.weight', 'model.layers.27.self_attn.k_proj.weight', 'model.layers.27.self_attn.o_proj.weight', 'model.layers.27.self_attn.q_proj.weight', 'model.layers.27.self_attn.v_proj.weight', 'model.layers.28.input_layernorm.weight', 'model.layers.28.mlp.down_proj.weight', 'model.layers.28.mlp.gate_proj.weight', 'model.layers.28.mlp.up_proj.weight', 'model.layers.28.post_attention_layernorm.weight', 'model.layers.28.self_attn.k_proj.weight', 'model.layers.28.self_attn.o_proj.weight', 'model.layers.28.self_attn.q_proj.weight', 'model.layers.28.self_attn.v_proj.weight', 'model.layers.29.input_layernorm.weight', 'model.layers.29.mlp.down_proj.weight', 'model.layers.29.mlp.gate_proj.weight', 'model.layers.29.mlp.up_proj.weight', 'model.layers.29.post_attention_layernorm.weight', 'model.layers.29.self_attn.k_proj.weight', 'model.layers.29.self_attn.o_proj.weight', 'model.layers.29.self_attn.q_proj.weight', 'model.layers.29.self_attn.v_proj.weight', 'model.layers.3.input_layernorm.weight', 'model.layers.3.mlp.down_proj.weight', 'model.layers.3.mlp.gate_proj.weight', 'model.layers.3.mlp.up_proj.weight', 'model.layers.3.post_attention_layernorm.weight', 'model.layers.3.self_attn.k_proj.weight', 'model.layers.3.self_attn.o_proj.weight', 'model.layers.3.self_attn.q_proj.weight', 'model.layers.3.self_attn.v_proj.weight', 'model.layers.30.input_layernorm.weight', 'model.layers.30.mlp.down_proj.weight', 'model.layers.30.mlp.gate_proj.weight', 'model.layers.30.mlp.up_proj.weight', 'model.layers.30.post_attention_layernorm.weight', 'model.layers.30.self_attn.k_proj.weight', 'model.layers.30.self_attn.o_proj.weight', 'model.layers.30.self_attn.q_proj.weight', 'model.layers.30.self_attn.v_proj.weight', 'model.layers.31.input_layernorm.weight', 'model.layers.31.mlp.down_proj.weight', 'model.layers.31.mlp.gate_proj.weight', 'model.layers.31.mlp.up_proj.weight', 'model.layers.31.post_attention_layernorm.weight', 'model.layers.31.self_attn.k_proj.weight', 'model.layers.31.self_attn.o_proj.weight', 'model.layers.31.self_attn.q_proj.weight', 'model.layers.31.self_attn.v_proj.weight', 'model.layers.5.input_layernorm.weight', 'model.layers.5.mlp.down_proj.weight', 'model.layers.5.mlp.gate_proj.weight', 'model.layers.5.mlp.up_proj.weight', 'model.layers.5.post_attention_layernorm.weight', 'model.layers.5.self_attn.k_proj.weight', 'model.layers.5.self_attn.o_proj.weight', 'model.layers.5.self_attn.q_proj.weight', 'model.layers.5.self_attn.v_proj.weight', 'model.layers.6.input_layernorm.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.6.mlp.gate_proj.weight', 'model.layers.6.mlp.up_proj.weight', 'model.layers.6.post_attention_layernorm.weight', 'model.layers.6.self_attn.k_proj.weight', 'model.layers.6.self_attn.o_proj.weight', 'model.layers.6.self_attn.q_proj.weight', 'model.layers.6.self_attn.v_proj.weight', 'model.layers.7.input_layernorm.weight', 'model.layers.7.mlp.down_proj.weight', 'model.layers.7.mlp.gate_proj.weight', 'model.layers.7.mlp.up_proj.weight', 'model.layers.7.post_attention_layernorm.weight', 'model.layers.7.self_attn.k_proj.weight', 'model.layers.7.self_attn.o_proj.weight', 'model.layers.7.self_attn.q_proj.weight', 'model.layers.7.self_attn.v_proj.weight', 'model.layers.8.input_layernorm.weight', 'model.layers.8.mlp.down_proj.weight', 'model.layers.8.mlp.gate_proj.weight', 'model.layers.8.mlp.up_proj.weight', 'model.layers.8.post_attention_layernorm.weight', 'model.layers.8.self_attn.k_proj.weight', 'model.layers.8.self_attn.o_proj.weight', 'model.layers.8.self_attn.q_proj.weight', 'model.layers.8.self_attn.v_proj.weight', 'model.layers.9.input_layernorm.weight', 'model.layers.9.mlp.down_proj.weight', 'model.layers.9.mlp.gate_proj.weight', 'model.layers.9.mlp.up_proj.weight', 'model.layers.9.post_attention_layernorm.weight', 'model.layers.9.self_attn.k_proj.weight', 'model.layers.9.self_attn.o_proj.weight', 'model.layers.9.self_attn.q_proj.weight', 'model.layers.9.self_attn.v_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 212,360,640 || all params: 212,360,640 || relaxation params: 0 || trainable%: 100.0000
+C:\Users\Students\.conda\envs\mor\lib\site-packages\torch\nn\modules\module.py:1329: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9.799999999999998e-05, 'epoch': 0.02}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.000198, 'epoch': 0.03}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.000298, 'epoch': 0.05}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002967161016949152, 'epoch': 0.07}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002914194915254237, 'epoch': 0.08}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002861228813559322, 'epoch': 0.1}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002808262711864407, 'epoch': 0.12}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00027552966101694913, 'epoch': 0.13}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002702330508474576, 'epoch': 0.15}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002649364406779661, 'epoch': 0.17}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00025963983050847453, 'epoch': 0.18}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00025434322033898304, 'epoch': 0.2}
+ 20%|█████████████████████████████████▋                                                                                                                                    | 609/3000 [34:54<2:10:25,  3.27s 20%|███████████▉                                               | 610/3000 [34:57<2:10:07,  3.27s/it]                                                                                                       {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002490466101694915, 'epoch': 0.22}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00024375, 'epoch': 0.23}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00023845338983050847, 'epoch': 0.25}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00023315677966101694, 'epoch': 0.27}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00022786016949152542, 'epoch': 0.28}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002225635593220339, 'epoch': 0.3}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00021726694915254237, 'epoch': 0.32}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00021197033898305085, 'epoch': 0.33}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00020667372881355933, 'epoch': 0.35}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0002013771186440678, 'epoch': 0.37}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00019608050847457625, 'epoch': 0.38}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00019078389830508473, 'epoch': 0.4}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0001854872881355932, 'epoch': 0.42}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00018019067796610168, 'epoch': 0.43}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00017489406779661016, 'epoch': 0.45}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0001695974576271186, 'epoch': 0.47}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00016430084745762709, 'epoch': 0.48}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00015900423728813556, 'epoch': 0.5}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00015370762711864404, 'epoch': 0.52}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00014841101694915252, 'epoch': 0.53}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.000143114406779661, 'epoch': 0.55}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00013781779661016947, 'epoch': 0.57}
+ 57%|█████████████████████████████████████████████████████████████████████▉                                                    | 1719/3000 [1:38:24<1:09: 57%|█████████████████████████████████████████████████████████████▎                                             | 1720/ 57%|███████████████████████████████████████████████████▋                                      | 1721/3000 [1:38:31<1:10:30,  3 57%|█████████████████████████████████████████████████▉                                     | 1722/3000 [1:38:34<1:10:16,  3.30s/it] {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00013252118644067795, 'epoch': 0.58}
+ 59%|███████████████████████████████████████████████████▏                                   | 1763/3000 [1:40:56<1:06:37,  3.23s/it]{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00012722457627118642, 'epoch': 0.6}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00012192796610169491, 'epoch': 0.62}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00011663135593220339, 'epoch': 0.63}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00011133474576271187, 'epoch': 0.65}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00010603813559322034, 'epoch': 0.67}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.00010074152542372882, 'epoch': 0.68}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9.544491525423727e-05, 'epoch': 0.7}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9.014830508474575e-05, 'epoch': 0.72}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 8.485169491525422e-05, 'epoch': 0.73}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7.95550847457627e-05, 'epoch': 0.75}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7.425847457627118e-05, 'epoch': 0.77}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6.896186440677965e-05, 'epoch': 0.78}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6.366525423728813e-05, 'epoch': 0.8}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5.836864406779661e-05, 'epoch': 0.82}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5.307203389830509e-05, 'epoch': 0.83}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.777542372881357e-05, 'epoch': 0.85}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.2478813559322045e-05, 'epoch': 0.87}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3.718220338983049e-05, 'epoch': 0.88}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3.1885593220338964e-05, 'epoch': 0.9}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.6588983050847445e-05, 'epoch': 0.92}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.1292372881355925e-05, 'epoch': 0.93}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.59957627118644e-05, 'epoch': 0.95}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.069915254237288e-05, 'epoch': 0.97}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5.402542372881358e-06, 'epoch': 0.98}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.0593220338983576e-07, 'epoch': 1.0}
+{'train_runtime': 10288.6493, 'train_samples_per_second': 4.665, 'train_steps_per_second': 0.292, 'train_loss': 0.0, 'epoch': 1.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████| 3000/3000 [2:51:28<00:00,  3.43s/it]
+***** pretrain metrics *****
+  epoch                    =        1.0
+  total_flos               = 90733183GF
+  train_loss               =        0.0
+  train_runtime            = 2:51:28.64
+  train_samples_per_second =      4.665
+  train_steps_per_second   =      0.292

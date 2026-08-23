@@ -1,0 +1,113 @@
+Vanilla Pedagogy Agent Training 
+(mor) D:\fy_proj\mixture_of_recursions>accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy
+D:\fy_proj\mixture_of_recursions\pretrain.py:30: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/pretrain", config_name="yymmdd_pretrain")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Automatically determining batch size based on `total_batch_size`
+total_batch_size              : 256 (given)
+torch.cuda.device_count()     : 1
+per_device_train_batch_size   : 4 (given)
+gradient_accumulation_steps   : 64 (computed)
+actual total batch size       : 256
+Setting wandb_run_name: 250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy
+Setting output_dir  : 250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy
+No checkpoint directories found matching D:\fy_proj\mixture_of_recursions\results\pretrain\250720_pretrain_smollm-360m_vanilla_lr3e-3_pedagogy\checkpoint-*
+D:\fy_proj\mixture_of_recursions\util\config.py:80: UserWarning: num_warmup_steps not found in config, setting to 5% of num_train_steps
+  warnings.warn(warning)
+D:\fy_proj\mixture_of_recursions\util\config.py:87: UserWarning: save_interval (0.25) will be used instead of save_steps (10)
+  warnings.warn(warning)
+D:\fy_proj\mixture_of_recursions\util\config.py:95: UserWarning: stop_steps (50) is not divisible by save_steps (12)
+  warnings.warn(warning)
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+--------------------------------------------------------------------------------
+Loading tokenizers...
+Loading dataset...
+Loading models...
+Initializing model from scratch...
+trainable params: 361,821,120 || all params: 361,821,120 || relaxation params: 0 || trainable%: 100.0000
+C:\Users\Students\.conda\envs\mor\lib\site-packages\torch\nn\modules\module.py:1329: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id zcAI4GuJ.
+wandb: Tracking run with wandb version 0.23.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\fy_proj\mixture_of_recursions\outputs\2026-01-23\12-38-02\wandb\offline-run-20260123_123826-zcAI4GuJ
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+{'loss': 10.9676, 'grad_norm': 15.0625, 'learning_rate': 0.0, 'epoch': 0.02}
+{'loss': 10.9691, 'grad_norm': 15.1875, 'learning_rate': 0.0015, 'epoch': 0.04}
+{'loss': 9.0022, 'grad_norm': 8.9375, 'learning_rate': 0.003, 'epoch': 0.06}
+{'loss': 7.7051, 'grad_norm': 21.25, 'learning_rate': 0.003, 'epoch': 0.08}
+{'loss': 6.8219, 'grad_norm': 20.25, 'learning_rate': 0.003, 'epoch': 0.1}
+{'loss': 6.0588, 'grad_norm': 4.1875, 'learning_rate': 0.003, 'epoch': 0.12}
+{'loss': 5.9091, 'grad_norm': 4.625, 'learning_rate': 0.003, 'epoch': 0.14}
+{'loss': 5.8211, 'grad_norm': 4.6875, 'learning_rate': 0.003, 'epoch': 0.16}
+{'loss': 5.4548, 'grad_norm': 2.609375, 'learning_rate': 0.003, 'epoch': 0.18}
+{'loss': 5.5586, 'grad_norm': 10.1875, 'learning_rate': 0.003, 'epoch': 0.2}
+{'loss': 5.7754, 'grad_norm': 9.6875, 'learning_rate': 0.003, 'epoch': 0.22}
+{'loss': 5.9051, 'grad_norm': 10.125, 'learning_rate': 0.003, 'epoch': 0.24}
+{'loss': 5.8365, 'grad_norm': 7.6875, 'learning_rate': 0.003, 'epoch': 0.26}
+{'loss': 5.6938, 'grad_norm': 2.8125, 'learning_rate': 0.003, 'epoch': 0.28}
+{'loss': 5.554, 'grad_norm': 2.1875, 'learning_rate': 0.003, 'epoch': 0.3}
+{'loss': 5.476, 'grad_norm': 2.640625, 'learning_rate': 0.003, 'epoch': 0.32}
+{'loss': 5.3809, 'grad_norm': 2.828125, 'learning_rate': 0.003, 'epoch': 0.34}
+{'loss': 5.4286, 'grad_norm': 2.75, 'learning_rate': 0.003, 'epoch': 0.36}
+{'loss': 5.452, 'grad_norm': 2.453125, 'learning_rate': 0.003, 'epoch': 0.38}
+{'loss': 5.372, 'grad_norm': 1.84375, 'learning_rate': 0.003, 'epoch': 0.4}
+{'loss': 5.328, 'grad_norm': 2.046875, 'learning_rate': 0.003, 'epoch': 0.42}
+{'loss': 5.3427, 'grad_norm': 1.234375, 'learning_rate': 0.003, 'epoch': 0.44}
+{'loss': 5.3385, 'grad_norm': 1.53125, 'learning_rate': 0.003, 'epoch': 0.46}
+{'loss': 5.3461, 'grad_norm': 1.5390625, 'learning_rate': 0.003, 'epoch': 0.48}
+{'loss': 5.3036, 'grad_norm': 1.171875, 'learning_rate': 0.003, 'epoch': 0.5}
+{'loss': 5.2736, 'grad_norm': 0.8671875, 'learning_rate': 0.003, 'epoch': 0.52}
+{'loss': 5.2878, 'grad_norm': 1.0, 'learning_rate': 0.003, 'epoch': 0.54}
+{'loss': 5.2995, 'grad_norm': 0.98046875, 'learning_rate': 0.003, 'epoch': 0.56}
+{'loss': 5.2854, 'grad_norm': 0.7109375, 'learning_rate': 0.003, 'epoch': 0.58}
+{'loss': 5.2715, 'grad_norm': 0.80859375, 'learning_rate': 0.003, 'epoch': 0.6}
+{'loss': 5.2709, 'grad_norm': 0.92578125, 'learning_rate': 0.003, 'epoch': 0.62}
+{'loss': 5.272, 'grad_norm': 0.87890625, 'learning_rate': 0.003, 'epoch': 0.64}
+{'loss': 5.2689, 'grad_norm': 0.72265625, 'learning_rate': 0.003, 'epoch': 0.66}
+{'loss': 5.261, 'grad_norm': 0.60546875, 'learning_rate': 0.003, 'epoch': 0.68}
+{'loss': 5.2548, 'grad_norm': 0.640625, 'learning_rate': 0.003, 'epoch': 0.7}
+{'loss': 5.2606, 'grad_norm': 0.65625, 'learning_rate': 0.003, 'epoch': 0.72}
+{'loss': 5.2598, 'grad_norm': 0.52734375, 'learning_rate': 0.003, 'epoch': 0.74}
+{'loss': 5.2539, 'grad_norm': 0.75390625, 'learning_rate': 0.003, 'epoch': 0.76}
+{'loss': 5.2404, 'grad_norm': 0.49609375, 'learning_rate': 0.003, 'epoch': 0.78}
+{'loss': 5.2302, 'grad_norm': 0.56640625, 'learning_rate': 0.003, 'epoch': 0.8}
+{'loss': 5.2177, 'grad_norm': 0.6328125, 'learning_rate': 0.003, 'epoch': 0.82}
+{'loss': 5.1902, 'grad_norm': 0.5546875, 'learning_rate': 0.003, 'epoch': 0.84}
+{'loss': 5.1426, 'grad_norm': 0.46875, 'learning_rate': 0.003, 'epoch': 0.86}
+{'loss': 5.0811, 'grad_norm': 0.447265625, 'learning_rate': 0.003, 'epoch': 0.88}
+{'loss': 4.9835, 'grad_norm': 0.58203125, 'learning_rate': 0.003, 'epoch': 0.9}
+{'loss': 4.8763, 'grad_norm': 0.47265625, 'learning_rate': 0.003, 'epoch': 0.92}
+{'loss': 4.7879, 'grad_norm': 0.71875, 'learning_rate': 0.003, 'epoch': 0.94}
+{'loss': 4.7477, 'grad_norm': 0.63671875, 'learning_rate': 0.003, 'epoch': 0.96}
+{'loss': 5.1499, 'grad_norm': 4.3125, 'learning_rate': 0.003, 'epoch': 0.98}
+ 98%|█████████████████████████████████████████████████████████████████████████████▍ | 49/50 [4:47:13<05:54, 354.56s/it]Stopping training at stop_steps=50
+{'loss': 4.7787, 'grad_norm': 1.3203125, 'learning_rate': 0.003, 'epoch': 1.0}
+{'train_runtime': 17613.4732, 'train_samples_per_second': 0.727, 'train_steps_per_second': 0.003, 'train_loss': 5.714948949813842, 'epoch': 1.0}
+100%|███████████████████████████████████████████████████████████████████████████████| 50/50 [4:53:25<00:00, 352.10s/it]
+***** pretrain metrics *****
+  epoch                    =        1.0
+  total_flos               = 46089140GF
+  train_loss               =     5.7149
+  train_runtime            = 4:53:33.47
+  train_samples_per_second =      0.727
+  train_steps_per_second   =      0.003
+wandb:
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync D:\fy_proj\mixture_of_recursions\outputs\2026-01-23\12-38-02\wandb\offline-run-20260123_123826-zcAI4GuJ
+wandb: Find logs at: wandb\offline-run-20260123_123826-zcAI4GuJ\logs
+
+(mor) D:\fy_proj\mixture_of_recursions>

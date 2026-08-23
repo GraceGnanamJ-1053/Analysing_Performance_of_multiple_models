@@ -1,0 +1,74 @@
+Recursion Orchestrator Agent Training 
+(mor) D:\fy_proj\mixture_of_recursions>accelerate launch --config_file acc_configs\single_gpu_config.yaml pretrain.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4
+D:\fy_proj\mixture_of_recursions\pretrain.py:30: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/pretrain", config_name="yymmdd_pretrain")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Automatically determining batch size based on `total_batch_size`
+total_batch_size              : 256 (given)
+torch.cuda.device_count()     : 1
+per_device_train_batch_size   : 4 (given)
+gradient_accumulation_steps   : 64 (computed)
+actual total batch size       : 256
+Setting wandb_run_name: 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4
+Setting output_dir  : 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4
+No checkpoint directories found matching D:\fy_proj\mixture_of_recursions\results\pretrain\250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001_orchestrator_v4\checkpoint-*
+D:\fy_proj\mixture_of_recursions\util\config.py:80: UserWarning: num_warmup_steps not found in config, setting to 5% of num_train_steps
+  warnings.warn(warning)
+D:\fy_proj\mixture_of_recursions\util\config.py:95: UserWarning: stop_steps (50) is not divisible by save_steps (12)
+  warnings.warn(warning)
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+--------------------------------------------------------------------------------
+Loading tokenizers...
+Loading dataset...
+Loading models...
+Initializing model from scratch...
+trainable params: 214,329,600 || all params: 214,329,600 || relaxation params: 0 || trainable%: 100.0000
+C:\Users\Students\.conda\envs\mor\lib\site-packages\torch\nn\modules\module.py:1329: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+[2026-01-30 14:12:19,248][util.trainer_pt][INFO] - ***** Running training *****
+[2026-01-30 14:12:19,250][util.trainer_pt][INFO] -   Num examples = 12,800
+[2026-01-30 14:12:19,250][util.trainer_pt][INFO] -   Num Epochs = 9,223,372,036,854,775,807
+[2026-01-30 14:12:19,250][util.trainer_pt][INFO] -   Instantaneous batch size per device = 4
+[2026-01-30 14:12:19,250][util.trainer_pt][INFO] -   Total train batch size (w. parallel, distributed & accumulation) = 256
+[2026-01-30 14:12:19,251][util.trainer_pt][INFO] -   Gradient Accumulation steps = 64
+[2026-01-30 14:12:19,251][util.trainer_pt][INFO] -   Total optimization steps = 50
+[2026-01-30 14:12:19,251][util.trainer_pt][INFO] -   Number of trainable parameters = 214,329,600
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id 1Wg1dfYg.
+wandb: Tracking run with wandb version 0.23.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\fy_proj\mixture_of_recursions\outputs\2026-01-30\14-11-43\wandb\offline-run-20260130_141225-1Wg1dfYg
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+ 98%|████████████████████████████████████████████████████████████████████████████████▎ | 49/50 [33:19<00:43, 43.41s/it]Stopping training at stop_steps=50
+100%|██████████████████████████████████████████████████████████████████████████████████| 50/50 [33:58<00:00, 41.91s/it][2026-01-30 14:46:33,508][util.trainer_pt][INFO] -
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+{'train_runtime': 2054.257, 'train_samples_per_second': 6.231, 'train_steps_per_second': 0.024, 'train_loss': 5.15175048828125, 'epoch': 1.0}
+100%|██████████████████████████████████████████████████████████████████████████████████| 50/50 [34:05<00:00, 40.90s/it]
+***** pretrain metrics *****
+  epoch                    =        1.0
+  total_flos               = 24483937GF
+  train_loss               =     5.1518
+  train_runtime            = 0:34:14.25
+  train_samples_per_second =      6.231
+  train_steps_per_second   =      0.024
+wandb:
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync D:\fy_proj\mixture_of_recursions\outputs\2026-01-30\14-11-43\wandb\offline-run-20260130_141225-1Wg1dfYg
+wandb: Find logs at: wandb\offline-run-20260130_141225-1Wg1dfYg\logs
+
+(mor) D:\fy_proj\mixture_of_recursions>

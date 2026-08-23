@@ -1,0 +1,768 @@
+(mor) D:\fy_proj\mixture_of_recursions>accelerate launch --config_file acc_configs/single_gpu_config.yaml --main_process_port 2339 eval_fewshot.py --config-name 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001 hydra.run.dir=D:/fy_proj/mixture_of_recursions/hydra_outputs
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+C:\Users\Students\.conda\envs\mor\lib\site-packages\hydra\_internal\hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+-------------------------------Preprocess Config -------------------------------
+Automatically determining batch size based on `total_batch_size`
+total_batch_size              : 1024 (given)
+torch.cuda.device_count()     : 1
+per_device_train_batch_size   : 16 (given)
+gradient_accumulation_steps   : 64 (computed)
+actual total batch size       : 1024
+Setting wandb_run_name: 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+Setting output_dir  : 250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001
+No checkpoint directories found matching D:\fy_proj\mixture_of_recursions\results\pretrain\250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001\checkpoint-*
+D:\fy_proj\mixture_of_recursions\util\config.py:95: UserWarning: stop_steps (14161) is not divisible by save_steps (1416)
+  warnings.warn(warning)
+Using deepspeed config = D:\fy_proj\mixture_of_recursions\ds_configs/stage2.config
+--------------------------------------------------------------------------------
+[2025-12-19 15:38:42,130][lm-eval][INFO] - Verbosity set to INFO
+Preparing evaluation of Recursive Transformer
+Loading model from pretrained weights...
+Loading model with flash_attention_2...
+[2025-12-19 15:39:16,621][lm-eval][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2025-12-19 15:39:16,621][lm-eval][INFO] - Using model type 'default'
+[2025-12-19 15:39:16,637][lm-eval][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2025-12-19 15:39:23,355][lm-eval][WARNING] -  --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+[2025-12-19 15:39:23,371][lm-eval][INFO] - Passed `--trust_remote_code`, setting environment variable `HF_DATASETS_TRUST_REMOTE_CODE=true`
+[2025-12-19 15:39:23,371][lm-eval][INFO] - Selected Tasks: ['arc_challenge', 'arc_easy', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'winogrande']
+[2025-12-19 15:39:23,434][lm-eval][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2025-12-19 15:39:23,434][lm-eval][INFO] - Using pre-initialized model
+[2025-12-19 15:40:28,510][lm-eval][WARNING] - [Task: lambada_openai] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+[2025-12-19 15:40:28,510][lm-eval][WARNING] - [Task: lambada_openai] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of winogrande from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of piqa from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of openbookqa from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of lambada_openai from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of hellaswag from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of arc_easy from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - Overwriting default num_fewshot of arc_challenge from None to 0
+[2025-12-19 15:41:33,993][lm-eval][WARNING] - model.chat_template was called with the chat_template set to False or None. Therefore no chat template will be applied. Make sure this is an intended behavior.
+[2025-12-19 15:41:33,993][lm-eval][INFO] - Building contexts for winogrande on rank 0...
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<?, ?it/s]
+[2025-12-19 15:41:34,024][lm-eval][INFO] - Building contexts for piqa on rank 0...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 2163.41it/s]
+[2025-12-19 15:41:34,692][lm-eval][INFO] - Building contexts for openbookqa on rank 0...
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 500/500 [00:00<00:00, 4033.34it/s]
+[2025-12-19 15:41:34,820][lm-eval][INFO] - Building contexts for lambada_openai on rank 0...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1030.29it/s]
+[2025-12-19 15:41:35,791][lm-eval][INFO] - Building contexts for hellaswag on rank 0...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 5246.17it/s]
+[2025-12-19 15:41:36,045][lm-eval][INFO] - Building contexts for arc_easy on rank 0...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 2246.96it/s]
+[2025-12-19 15:41:36,523][lm-eval][INFO] - Building contexts for arc_challenge on rank 0...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 2238.91it/s]
+[2025-12-19 15:41:37,007][lm-eval][INFO] - Running loglikelihood requests
+Running loglikelihood requests: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 18996/18996 [02:06<00:00, 150.35it/s]
+bootstrapping for stddev: perplexity
+  0%|                                                                                                                                                              | 0/100 [00:00<?, ?it/s]D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+  1%|█▌                                                                                                                                                    | 1/100 [00:15<25:06, 15.21s/it]D:\fy_proj\mixture_of_recursions\eval_fewshot.py:76: UserWarning:
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="conf/eval_fewshot", config_name="yymmdd_eval_fewshot")
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.31it/s]
+[2025-12-19 15:44:05,537][lm-eval][WARNING] - Failed to get model SHA for MoRLlamaForCausalLM(
+  (model): MoRLlamaModel(
+    (embed_tokens): Embedding(49152, 960)
+    (layers): ModuleList(
+      (0): LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=960, out_features=960, bias=False)
+          (k_proj): Linear(in_features=960, out_features=320, bias=False)
+          (v_proj): Linear(in_features=960, out_features=320, bias=False)
+          (o_proj): Linear(in_features=960, out_features=960, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+      )
+      (1-3): 3 x MoRLlamaDecoderLayer(
+        (block): ModuleList(
+          (0-9): 10 x LlamaDecoderLayer(
+            (self_attn): MoRLlamaAttention(
+              (q_proj): Linear(in_features=960, out_features=960, bias=False)
+              (k_proj): Linear(in_features=960, out_features=320, bias=False)
+              (v_proj): Linear(in_features=960, out_features=320, bias=False)
+              (o_proj): Linear(in_features=960, out_features=960, bias=False)
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+              (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+              (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+            (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+          )
+        )
+        (mor_router): LinearRouter(
+          (router): Linear(in_features=960, out_features=1, bias=False)
+        )
+        (bce_loss): BCEWithLogitsLoss()
+      )
+      (4): LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=960, out_features=960, bias=False)
+          (k_proj): Linear(in_features=960, out_features=320, bias=False)
+          (v_proj): Linear(in_features=960, out_features=320, bias=False)
+          (o_proj): Linear(in_features=960, out_features=960, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((960,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=960, out_features=49152, bias=False)
+) at revision main. Error: Repo id must be a string, not <class 'model.mor_model.modeling_llama.MoRLlamaForCausalLM'>: 'MoRLlamaForCausalLM(
+  (model): MoRLlamaModel(
+    (embed_tokens): Embedding(49152, 960)
+    (layers): ModuleList(
+      (0): LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=960, out_features=960, bias=False)
+          (k_proj): Linear(in_features=960, out_features=320, bias=False)
+          (v_proj): Linear(in_features=960, out_features=320, bias=False)
+          (o_proj): Linear(in_features=960, out_features=960, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+      )
+      (1-3): 3 x MoRLlamaDecoderLayer(
+        (block): ModuleList(
+          (0-9): 10 x LlamaDecoderLayer(
+            (self_attn): MoRLlamaAttention(
+              (q_proj): Linear(in_features=960, out_features=960, bias=False)
+              (k_proj): Linear(in_features=960, out_features=320, bias=False)
+              (v_proj): Linear(in_features=960, out_features=320, bias=False)
+              (o_proj): Linear(in_features=960, out_features=960, bias=False)
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+              (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+              (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+            (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+          )
+        )
+        (mor_router): LinearRouter(
+          (router): Linear(in_features=960, out_features=1, bias=False)
+        )
+        (bce_loss): BCEWithLogitsLoss()
+      )
+      (4): LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=960, out_features=960, bias=False)
+          (k_proj): Linear(in_features=960, out_features=320, bias=False)
+          (v_proj): Linear(in_features=960, out_features=320, bias=False)
+          (o_proj): Linear(in_features=960, out_features=960, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (up_proj): Linear(in_features=960, out_features=2560, bias=False)
+          (down_proj): Linear(in_features=2560, out_features=960, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((960,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((960,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=960, out_features=49152, bias=False)
+)'.
+fatal: not a git repository (or any of the parent directories): .git
+{
+  "results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.237,
+      "acc_stderr,none": 0.013454070462577926,
+      "acc_norm,none": 0.272,
+      "acc_norm_stderr,none": 0.014078856992462621
+    },
+    "arc_easy": {
+      "alias": "arc_easy",
+      "acc,none": 0.557,
+      "acc_stderr,none": 0.015716169953204105,
+      "acc_norm,none": 0.506,
+      "acc_norm_stderr,none": 0.015818160898606715
+    },
+    "hellaswag": {
+      "alias": "hellaswag",
+      "acc,none": 0.351,
+      "acc_stderr,none": 0.015100563798316405,
+      "acc_norm,none": 0.425,
+      "acc_norm_stderr,none": 0.0156403203170401
+    },
+    "lambada_openai": {
+      "alias": "lambada_openai",
+      "perplexity,none": 47.91895685004415,
+      "perplexity_stderr,none": 4.435273039849749,
+      "acc,none": 0.327,
+      "acc_stderr,none": 0.014842213153411244
+    },
+    "openbookqa": {
+      "alias": "openbookqa",
+      "acc,none": 0.21,
+      "acc_stderr,none": 0.018233620865305913,
+      "acc_norm,none": 0.332,
+      "acc_norm_stderr,none": 0.021081766571222856
+    },
+    "piqa": {
+      "alias": "piqa",
+      "acc,none": 0.668,
+      "acc_stderr,none": 0.014899597242811483,
+      "acc_norm,none": 0.663,
+      "acc_norm_stderr,none": 0.014955087918653596
+    },
+    "winogrande": {
+      "alias": "winogrande",
+      "acc,none": 0.515,
+      "acc_stderr,none": 0.015812179641814895
+    }
+  },
+  "group_subtasks": {
+    "arc_challenge": [],
+    "arc_easy": [],
+    "hellaswag": [],
+    "lambada_openai": [],
+    "openbookqa": [],
+    "piqa": [],
+    "winogrande": []
+  },
+  "configs": {
+    "arc_challenge": {
+      "task": "arc_challenge",
+      "tag": [
+        "ai2_arc"
+      ],
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Challenge",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "arc_easy": {
+      "task": "arc_easy",
+      "tag": [
+        "ai2_arc"
+      ],
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Easy",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "hellaswag": {
+      "task": "hellaswag",
+      "tag": [
+        "multiple_choice"
+      ],
+      "dataset_path": "hellaswag",
+      "dataset_kwargs": {},
+      "training_split": "train",
+      "validation_split": "validation",
+      "process_docs": "def process_docs(dataset: datasets.Dataset) -> datasets.Dataset:\n    def _process_doc(doc):\n        ctx = doc[\"ctx_a\"] + \" \" + doc[\"ctx_b\"].capitalize()\n        out_doc = {\n            \"query\": preprocess(doc[\"activity_label\"] + \": \" + ctx),\n            \"choices\": [preprocess(ending) for ending in doc[\"endings\"]],\n            \"gold\": int(doc[\"label\"]),\n        }\n        return out_doc\n\n    return dataset.map(_process_doc)\n",
+      "doc_to_text": "{{query}}",
+      "doc_to_target": "{{label}}",
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "lambada_openai": {
+      "task": "lambada_openai",
+      "tag": [
+        "lambada"
+      ],
+      "dataset_path": "EleutherAI/lambada_openai",
+      "dataset_name": "default",
+      "dataset_kwargs": {},
+      "test_split": "test",
+      "doc_to_text": "{{text.split(' ')[:-1]|join(' ')}}",
+      "doc_to_target": "{{' '+text.split(' ')[-1]}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "perplexity",
+          "aggregation": "perplexity",
+          "higher_is_better": false
+        },
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "loglikelihood",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{text}}",
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "openbookqa": {
+      "task": "openbookqa",
+      "dataset_path": "openbookqa",
+      "dataset_name": "main",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "question_stem",
+      "doc_to_target": "{{choices.label.index(answerKey.lstrip())}}",
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question_stem",
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "piqa": {
+      "task": "piqa",
+      "dataset_path": "piqa",
+      "dataset_kwargs": {},
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "Question: {{goal}}\nAnswer:",
+      "doc_to_target": "label",
+      "doc_to_choice": "{{[sol1, sol2]}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "goal",
+      "metadata": {
+        "version": 1.0
+      }
+    },
+    "winogrande": {
+      "task": "winogrande",
+      "dataset_path": "winogrande",
+      "dataset_name": "winogrande_xl",
+      "dataset_kwargs": {},
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "def doc_to_text(doc):\n    answer_to_num = {\"1\": 0, \"2\": 1}\n    return answer_to_num[doc[\"answer\"]]\n",
+      "doc_to_target": "def doc_to_target(doc):\n    idx = doc[\"sentence\"].index(\"_\") + 1\n    return doc[\"sentence\"][idx:].strip()\n",
+      "doc_to_choice": "def doc_to_choice(doc):\n    idx = doc[\"sentence\"].index(\"_\")\n    options = [doc[\"option1\"], doc[\"option2\"]]\n    return [doc[\"sentence\"][:idx] + opt for opt in options]\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "sentence",
+      "metadata": {
+        "version": 1.0
+      }
+    }
+  },
+  "versions": {
+    "arc_challenge": 1.0,
+    "arc_easy": 1.0,
+    "hellaswag": 1.0,
+    "lambada_openai": 1.0,
+    "openbookqa": 1.0,
+    "piqa": 1.0,
+    "winogrande": 1.0
+  },
+  "n-shot": {
+    "arc_challenge": 0,
+    "arc_easy": 0,
+    "hellaswag": 0,
+    "lambada_openai": 0,
+    "openbookqa": 0,
+    "piqa": 0,
+    "winogrande": 0
+  },
+  "higher_is_better": {
+    "arc_challenge": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "arc_easy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "hellaswag": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "lambada_openai": {
+      "perplexity": false,
+      "acc": true
+    },
+    "openbookqa": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "piqa": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "winogrande": {
+      "acc": true
+    }
+  },
+  "n-samples": {
+    "winogrande": {
+      "original": 1267,
+      "effective": 1000
+    },
+    "piqa": {
+      "original": 1838,
+      "effective": 1000
+    },
+    "openbookqa": {
+      "original": 500,
+      "effective": 500
+    },
+    "lambada_openai": {
+      "original": 5153,
+      "effective": 1000
+    },
+    "hellaswag": {
+      "original": 10042,
+      "effective": 1000
+    },
+    "arc_easy": {
+      "original": 2376,
+      "effective": 1000
+    },
+    "arc_challenge": {
+      "original": 1172,
+      "effective": 1000
+    }
+  },
+  "config": {
+    "model": "D:\\fy_proj\\mixture_of_recursions\\checkpoints\\250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001",
+    "model_args": "pretrained=D:\\fy_proj\\mixture_of_recursions\\results\\pretrain/250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001,trust_remote_code=True",
+    "model_num_parameters": 361824000,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "",
+    "batch_size": 4,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": 1000,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1766138963.3712978,
+  "pretty_env_info": "PyTorch version: 2.6.0+cu124\nIs debug build: False\nCUDA used to build PyTorch: 12.4\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Pro (10.0.26100 64-bit)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-10-10.0.26100-SP0\nIs CUDA available: True\nCUDA runtime version: 13.0.48\r\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA RTX A4000\nNvidia driver version: 551.86\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nName: 13th Gen Intel(R) Core(TM) i7-13700\nManufacturer: GenuineIntel\nFamily: 198\nArchitecture: 9\nProcessorType: 3\nDeviceID: CPU0\nCurrentClockSpeed: 2100\nMaxClockSpeed: 2100\nL2CacheSize: 24576\nL2CacheSpeed: None\nRevision: None\n\nVersions of relevant libraries:\n[pip3] numpy==1.26.4\n[pip3] torch==2.6.0+cu124\n[pip3] torchaudio==2.6.0+cu124\n[pip3] torchvision==0.21.0+cu124\n[pip3] triton-windows==3.2.0.post21\n[conda] numpy                     1.26.4                   pypi_0    pypi\n[conda] torch                     2.6.0+cu124              pypi_0    pypi\n[conda] torchaudio                2.6.0+cu124              pypi_0    pypi\n[conda] torchvision               0.21.0+cu124             pypi_0    pypi\n[conda] triton-windows            3.2.0.post21             pypi_0    pypi",
+  "transformers_version": "4.52.4",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "tokenizer_bos_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "eot_token_id": 0,
+  "max_length": 2048
+}
+[2025-12-19 15:44:16,944][lm-eval][INFO] - Saving results aggregated
+[2025-12-19 15:44:17,054][lm-eval][WARNING] - Could not save results aggregated
+[2025-12-19 15:44:17,054][lm-eval][INFO] - FileNotFoundError(2, 'The system cannot find the path specified')
+recursive_lm (pretrained=D:\fy_proj\mixture_of_recursions\results\pretrain/250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001,trust_remote_code=True), gen_kwargs: (None), limit: 1000, num_fewshot: 0, batch_size: 4
+|    Tasks     |Version|Filter|n-shot|  Metric  |   |Value |   |Stderr|
+|--------------|------:|------|-----:|----------|---|-----:|---|-----:|
+|arc_challenge |      1|none  |     0|acc       |↑  | 0.237|±  |0.0135|
+|              |       |none  |     0|acc_norm  |↑  | 0.272|±  |0.0141|
+|arc_easy      |      1|none  |     0|acc       |↑  | 0.557|±  |0.0157|
+|              |       |none  |     0|acc_norm  |↑  | 0.506|±  |0.0158|
+|hellaswag     |      1|none  |     0|acc       |↑  | 0.351|±  |0.0151|
+|              |       |none  |     0|acc_norm  |↑  | 0.425|±  |0.0156|
+|lambada_openai|      1|none  |     0|acc       |↑  | 0.327|±  |0.0148|
+|              |       |none  |     0|perplexity|↓  |47.919|±  |4.4353|
+|openbookqa    |      1|none  |     0|acc       |↑  | 0.210|±  |0.0182|
+|              |       |none  |     0|acc_norm  |↑  | 0.332|±  |0.0211|
+|piqa          |      1|none  |     0|acc       |↑  | 0.668|±  |0.0149|
+|              |       |none  |     0|acc_norm  |↑  | 0.663|±  |0.0150|
+|winogrande    |      1|none  |     0|acc       |↑  | 0.515|±  |0.0158|
+
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id aO41BT1c.
+wandb: Tracking run with wandb version 0.23.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\fy_proj\mixture_of_recursions\hydra_outputs\wandb\offline-run-20251219_154936-aO41BT1c
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+wandb: Logging into https://api.wandb.ai. (Learn how to deploy a W&B server locally: https://wandb.me/wandb-server)
+wandb: Find your API key here: https://wandb.ai/authorize?ref=models
+wandb: Paste an API key from your profile and hit enter:
