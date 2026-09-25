@@ -1,0 +1,100 @@
+{"topic":"Newton's First Law","level":"beginner","style":"simple","explanation":"Newton's First Law states that an object will remain at rest or move in a straight line at constant speed unless an external force acts on it."}
+{"topic":"Binary Search","level":"beginner","style":"step-by-step","explanation":"Binary search works by repeatedly dividing a sorted list into halves and checking whether the target lies in the left or right half."}
+{"topic":"Overfitting","level":"beginner","style":"conceptual","explanation":"Overfitting happens when a model learns the training data too well, including noise, which reduces its performance on new data."}
+{"topic":"Stack Data Structure","level":"beginner","style":"example-based","explanation":"A stack follows the Last In First Out principle, like a stack of plates where the last plate added is the first removed."}
+{"topic":"Ohm’s Law","level":"beginner","style":"simple","explanation":"Ohm’s Law states that the current through a conductor is directly proportional to the voltage and inversely proportional to resistance."}
+{"topic":"Recursion","level":"intermediate","style":"conceptual","explanation":"Recursion is a technique where a function calls itself to solve smaller instances of the same problem until a base case is reached."}
+{"topic":"Operating System","level":"beginner","style":"simple","explanation":"An operating system is software that manages hardware resources and provides services to applications and users."}
+{"topic":"Time Complexity","level":"beginner","style":"intuitive","explanation":"Time complexity describes how the execution time of an algorithm grows as the size of the input increases."}
+{"topic":"Probability","level":"beginner","style":"simple","explanation":"Probability measures how likely an event is to occur, expressed as a number between 0 and 1."}
+{"topic":"Database Indexing","level":"intermediate","style":"conceptual","explanation":"Database indexing improves query performance by allowing faster data retrieval, similar to an index in a book."}
+{"topic":"Newton's Third Law","level":"beginner","style":"simple","explanation":"Newton’s Third Law states that for every action, there is an equal and opposite reaction."}
+{"topic":"Merge Sort","level":"intermediate","style":"step-by-step","explanation":"Merge sort divides an array into smaller parts, sorts them, and then merges the sorted parts to produce a sorted array."}
+{"topic":"Bias-Variance Tradeoff","level":"intermediate","style":"conceptual","explanation":"The bias-variance tradeoff describes the balance between model simplicity and flexibility to achieve good generalization."}
+{"topic":"Linked List","level":"beginner","style":"example-based","explanation":"A linked list is a collection of nodes where each node stores data and a reference to the next node."}
+{"topic":"Coulomb’s Law","level":"beginner","style":"simple","explanation":"Coulomb’s Law explains the force of attraction or repulsion between two charged particles."}
+{"topic":"Dynamic Programming","level":"intermediate","style":"conceptual","explanation":"Dynamic programming solves complex problems by breaking them into overlapping subproblems and storing results."}
+{"topic":"Process Scheduling","level":"intermediate","style":"conceptual","explanation":"Process scheduling decides which process runs on the CPU at a given time to maximize efficiency and fairness."}
+{"topic":"Space Complexity","level":"beginner","style":"intuitive","explanation":"Space complexity measures how much memory an algorithm needs as the input size increases."}
+{"topic":"Random Variables","level":"beginner","style":"simple","explanation":"A random variable assigns numerical values to the outcomes of a random experiment."}
+{"topic":"ACID Properties","level":"intermediate","style":"conceptual","explanation":"ACID properties ensure reliable database transactions through atomicity, consistency, isolation, and durability."}
+{"topic":"Work and Power","level":"beginner","style":"simple","explanation":"Work is done when a force causes displacement, and power measures how fast the work is done."}
+{"topic":"Quick Sort","level":"intermediate","style":"step-by-step","explanation":"Quick sort selects a pivot element, partitions the array around it, and recursively sorts the subarrays."}
+{"topic":"Cross Validation","level":"intermediate","style":"conceptual","explanation":"Cross validation evaluates a model by training and testing it on different subsets of the data to assess generalization."}
+{"topic":"Hash Tables","level":"beginner","style":"example-based","explanation":"A hash table stores key-value pairs and uses a hash function to quickly locate values."}
+{"topic":"Bernoulli Trials","level":"beginner","style":"simple","explanation":"A Bernoulli trial is a random experiment with only two possible outcomes, usually success or failure."}
+{"topic":"Paging","level":"intermediate","style":"conceptual","explanation":"Paging is a memory management technique that divides memory into fixed-size blocks to avoid fragmentation."}
+{"topic":"Concurrency","level":"beginner","style":"intuitive","explanation":"Concurrency allows multiple tasks to make progress during overlapping time periods."}
+{"topic":"Matrix Addition","level":"beginner","style":"step-by-step","explanation":"Matrix addition is performed by adding corresponding elements of matrices with the same dimensions."}
+{"topic":"Client-Server Model","level":"beginner","style":"simple","explanation":"The client-server model divides tasks between service providers (servers) and service requesters (clients)."}
+{"topic":"Transaction Management","level":"intermediate","style":"conceptual","explanation":"Transaction management ensures that database operations are executed reliably and consistently."}
+{"topic":"Friction","level":"beginner","style":"simple","explanation":"Friction is a force that resists the motion between two surfaces that are in contact."}
+{"topic":"Heap Sort","level":"intermediate","style":"step-by-step","explanation":"Heap sort builds a heap from the input data and repeatedly removes the maximum element to produce a sorted array."}
+{"topic":"Gradient Descent","level":"intermediate","style":"conceptual","explanation":"Gradient descent is an optimization method that minimizes a function by moving in the direction of the steepest decrease."}
+{"topic":"Circular Queue","level":"beginner","style":"example-based","explanation":"A circular queue connects the end of the queue back to the beginning to efficiently use memory."}
+{"topic":"Pascal’s Triangle","level":"beginner","style":"intuitive","explanation":"Pascal’s triangle is a triangular array of numbers where each number is the sum of the two above it."}
+{"topic":"Virtual Memory","level":"intermediate","style":"conceptual","explanation":"Virtual memory allows programs to use more memory than physically available by using disk space as an extension of RAM."}
+{"topic":"Deadlock Prevention","level":"intermediate","style":"conceptual","explanation":"Deadlock prevention avoids deadlocks by ensuring that at least one of the necessary deadlock conditions cannot occur."}
+{"topic":"Vector Dot Product","level":"beginner","style":"step-by-step","explanation":"The dot product of two vectors is found by multiplying corresponding components and summing the results."}
+{"topic":"REST Architecture","level":"beginner","style":"simple","explanation":"REST is an architectural style for designing networked applications using stateless communication and standard HTTP methods."}
+{"topic":"Two-Phase Locking","level":"intermediate","style":"conceptual","explanation":"Two-phase locking ensures serializability in databases by dividing locking into growing and shrinking phases."}
+{"topic":"Momentum","level":"beginner","style":"simple","explanation":"Momentum is the product of an object's mass and velocity, describing how difficult it is to stop the object."}
+{"topic":"Counting Sort","level":"beginner","style":"step-by-step","explanation":"Counting sort counts the number of occurrences of each element and uses this information to place elements in order."}
+{"topic":"Support Vector Machines","level":"intermediate","style":"conceptual","explanation":"Support Vector Machines classify data by finding a decision boundary that maximizes the margin between classes."}
+{"topic":"Deque","level":"beginner","style":"example-based","explanation":"A deque is a double-ended queue that allows insertion and deletion from both the front and rear."}
+{"topic":"Binomial Distribution","level":"beginner","style":"intuitive","explanation":"The binomial distribution models the number of successes in a fixed number of independent trials."}
+{"topic":"Thread Synchronization","level":"intermediate","style":"conceptual","explanation":"Thread synchronization coordinates the execution of threads to prevent conflicts when accessing shared resources."}
+{"topic":"Eigenvalues","level":"intermediate","style":"conceptual","explanation":"Eigenvalues represent scaling factors associated with linear transformations of vectors."}
+{"topic":"IP Addressing","level":"beginner","style":"simple","explanation":"IP addressing assigns unique numerical identifiers to devices so they can communicate over a network."}
+{"topic":"Normalization vs Denormalization","level":"intermediate","style":"conceptual","explanation":"Normalization reduces redundancy by structuring data efficiently, while denormalization improves read performance by duplicating data."}
+{"topic":"Bayes Theorem","level":"beginner","style":"intuitive","explanation":"Bayes theorem describes how to update probabilities when new evidence is available."}
+{"topic":"Angular Velocity","level":"beginner","style":"simple","explanation":"Angular velocity describes how fast an object rotates around an axis, measured in radians per second."}
+{"topic":"Shell Sort","level":"intermediate","style":"step-by-step","explanation":"Shell sort improves insertion sort by comparing elements that are far apart and gradually reducing the gap."}
+{"topic":"Decision Trees","level":"beginner","style":"conceptual","explanation":"Decision trees classify data by making a sequence of decisions based on feature values."}
+{"topic":"Sparse Matrices","level":"beginner","style":"example-based","explanation":"A sparse matrix contains mostly zero values, allowing efficient storage by recording only non-zero elements."}
+{"topic":"Geometric Progression","level":"beginner","style":"intuitive","explanation":"A geometric progression is a sequence where each term is obtained by multiplying the previous term by a constant ratio."}
+{"topic":"Page Replacement Algorithms","level":"intermediate","style":"conceptual","explanation":"Page replacement algorithms decide which memory pages to remove when new pages need to be loaded into memory."}
+{"topic":"Race Conditions","level":"beginner","style":"simple","explanation":"A race condition occurs when multiple threads access shared data and the final result depends on execution order."}
+{"topic":"Matrix Multiplication","level":"beginner","style":"step-by-step","explanation":"Matrix multiplication combines rows and columns of two matrices to produce a new matrix."}
+{"topic":"Client-Server Architecture","level":"beginner","style":"simple","explanation":"Client-server architecture separates responsibilities between service providers and service requesters."}
+{"topic":"Checkpointing","level":"intermediate","style":"conceptual","explanation":"Checkpointing saves the state of a system so it can recover from failures without restarting completely."}
+{"topic":"Moment of Inertia","level":"beginner","style":"simple","explanation":"Moment of inertia measures how resistant an object is to rotational motion, depending on mass distribution."}
+{"topic":"Comb Sort","level":"intermediate","style":"step-by-step","explanation":"Comb sort improves bubble sort by comparing elements at a shrinking gap until the list is sorted."}
+{"topic":"Logistic Regression","level":"beginner","style":"conceptual","explanation":"Logistic regression predicts probabilities for binary outcomes using a sigmoid function."}
+{"topic":"Bloom Filters","level":"intermediate","style":"example-based","explanation":"A bloom filter is a space-efficient probabilistic structure used to test set membership with possible false positives."}
+{"topic":"Permutations","level":"beginner","style":"intuitive","explanation":"Permutations count the number of ways items can be arranged when order matters."}
+{"topic":"Deadlock Detection","level":"intermediate","style":"conceptual","explanation":"Deadlock detection identifies cycles in resource allocation to determine whether a deadlock exists."}
+{"topic":"Mutex Locks","level":"beginner","style":"simple","explanation":"A mutex lock ensures that only one thread can access a shared resource at a time."}
+{"topic":"Eigenvectors","level":"intermediate","style":"conceptual","explanation":"Eigenvectors indicate directions that remain unchanged in direction under a linear transformation."}
+{"topic":"API Gateways","level":"beginner","style":"simple","explanation":"An API gateway acts as a single entry point that routes requests to appropriate backend services."}
+{"topic":"Write-Ahead Logging","level":"intermediate","style":"conceptual","explanation":"Write-ahead logging records changes before they are applied, ensuring database recovery after crashes."}
+{"topic":"Angular Acceleration","level":"beginner","style":"simple","explanation":"Angular acceleration describes how quickly angular velocity changes over time."}
+{"topic":"Tim Sort","level":"intermediate","style":"step-by-step","explanation":"Tim sort combines insertion sort and merge sort to efficiently sort real-world data."}
+{"topic":"Naive Bayes Classifier","level":"beginner","style":"conceptual","explanation":"Naive Bayes is a probabilistic classifier based on Bayes theorem with an assumption of feature independence."}
+{"topic":"Disjoint Set Union","level":"intermediate","style":"example-based","explanation":"Disjoint set union manages a collection of non-overlapping sets using union and find operations."}
+{"topic":"Combinations","level":"beginner","style":"intuitive","explanation":"Combinations count the number of ways to choose items from a set when order does not matter."}
+{"topic":"Memory Fragmentation","level":"intermediate","style":"conceptual","explanation":"Memory fragmentation occurs when free memory is divided into small non-contiguous blocks, reducing efficiency."}
+{"topic":"Spinlock","level":"beginner","style":"simple","explanation":"A spinlock is a lock where a thread repeatedly checks for availability instead of sleeping."}
+{"topic":"Singular Value Decomposition","level":"intermediate","style":"conceptual","explanation":"SVD decomposes a matrix into singular vectors and values, useful for dimensionality reduction."}
+{"topic":"Reverse Proxy","level":"beginner","style":"simple","explanation":"A reverse proxy forwards client requests to backend servers and improves security and performance."}
+{"topic":"Shadow Paging","level":"intermediate","style":"conceptual","explanation":"Shadow paging maintains consistency by keeping separate old and new versions of modified database pages."}
+{"topic":"Torque and Rotation","level":"beginner","style":"simple","explanation":"Torque causes an object to rotate and depends on the applied force and its distance from the axis of rotation."}
+{"topic":"Intro Sort","level":"intermediate","style":"step-by-step","explanation":"Intro sort begins with quick sort and switches to heap sort when recursion depth becomes too large."}
+{"topic":"K-Nearest Neighbors","level":"beginner","style":"conceptual","explanation":"KNN classifies data points based on the majority class among their nearest neighbors."}
+{"topic":"Suffix Array","level":"intermediate","style":"example-based","explanation":"A suffix array stores all suffixes of a string in sorted order to support efficient pattern matching."}
+{"topic":"Conditional Probability","level":"beginner","style":"intuitive","explanation":"Conditional probability measures the likelihood of an event occurring given that another event has already occurred."}
+{"topic":"Memory Paging","level":"intermediate","style":"conceptual","explanation":"Memory paging divides processes into fixed-size pages to allow efficient memory allocation."}
+{"topic":"Atomic Operations","level":"beginner","style":"simple","explanation":"Atomic operations are executed completely without interruption, ensuring data consistency in concurrent systems."}
+{"topic":"Covariance","level":"intermediate","style":"conceptual","explanation":"Covariance indicates how two variables change together, showing whether they increase or decrease simultaneously."}
+{"topic":"Content Delivery Networks","level":"beginner","style":"simple","explanation":"A CDN distributes content across multiple servers to deliver data faster to users."}
+{"topic":"Write Skew","level":"intermediate","style":"conceptual","explanation":"Write skew is an anomaly where concurrent transactions read overlapping data and write disjoint updates, leading to inconsistency."}
+{"topic":"Centrifugal Force","level":"beginner","style":"simple","explanation":"Centrifugal force is an apparent force observed in a rotating frame that seems to push objects outward from the center."}
+{"topic":"Bitonic Sort","level":"intermediate","style":"step-by-step","explanation":"Bitonic sort works by forming bitonic sequences and recursively merging them to produce a sorted sequence."}
+{"topic":"Linear Regression","level":"beginner","style":"conceptual","explanation":"Linear regression models the relationship between variables by fitting a straight line that minimizes prediction error."}
+{"topic":"Persistent Data Structures","level":"intermediate","style":"example-based","explanation":"Persistent data structures preserve previous versions of themselves when modified, allowing access to older states."}
+{"topic":"Random Sampling","level":"beginner","style":"intuitive","explanation":"Random sampling selects a subset of data such that every element has an equal chance of being chosen."}
+{"topic":"Memory Compaction","level":"intermediate","style":"conceptual","explanation":"Memory compaction rearranges processes in memory to reduce fragmentation and improve utilization."}
+{"topic":"Lock-Free Algorithms","level":"intermediate","style":"conceptual","explanation":"Lock-free algorithms allow multiple threads to operate on shared data without using locks, ensuring system progress."}
+{"topic":"Correlation","level":"beginner","style":"simple","explanation":"Correlation measures the strength and direction of the relationship between two variables."}
+{"topic":"Service-Oriented Architecture","level":"beginner","style":"simple","explanation":"Service-oriented architecture structures applications as a collection of loosely coupled services."}
+{"topic":"Checkpoint Recovery","level":"intermediate","style":"conceptual","explanation":"Checkpoint recovery restores a system to a previously saved state after a failure occurs."}

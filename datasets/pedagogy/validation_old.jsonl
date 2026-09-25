@@ -1,0 +1,100 @@
+{"topic":"Newton's Second Law","level":"beginner","style":"simple","explanation":"Newton’s Second Law states that the force acting on an object is equal to its mass multiplied by its acceleration."}
+{"topic":"Linear Search","level":"beginner","style":"step-by-step","explanation":"Linear search checks each element in a list one by one until the desired value is found or the list ends."}
+{"topic":"Underfitting","level":"beginner","style":"conceptual","explanation":"Underfitting occurs when a model is too simple to capture the underlying patterns in the data."}
+{"topic":"Queue Data Structure","level":"beginner","style":"example-based","explanation":"A queue follows the First In First Out principle, similar to people waiting in a line."}
+{"topic":"Kirchhoff’s Laws","level":"intermediate","style":"conceptual","explanation":"Kirchhoff’s laws describe how current and voltage behave in electrical circuits based on conservation principles."}
+{"topic":"Iteration","level":"beginner","style":"simple","explanation":"Iteration is the process of repeating a set of instructions until a condition is met."}
+{"topic":"Computer Network","level":"beginner","style":"simple","explanation":"A computer network connects multiple devices so they can share data and resources."}
+{"topic":"Big-O Notation","level":"beginner","style":"intuitive","explanation":"Big-O notation describes the upper bound of an algorithm’s time or space requirements as input size grows."}
+{"topic":"Mean and Median","level":"beginner","style":"example-based","explanation":"The mean is the average of values, while the median is the middle value when data is ordered."}
+{"topic":"Normalization in DBMS","level":"intermediate","style":"conceptual","explanation":"Normalization organizes database tables to reduce redundancy and improve data integrity."}
+{"topic":"Law of Conservation of Energy","level":"beginner","style":"simple","explanation":"The law of conservation of energy states that energy cannot be created or destroyed, only transformed."}
+{"topic":"Selection Sort","level":"beginner","style":"step-by-step","explanation":"Selection sort repeatedly selects the smallest element from the unsorted part and moves it to the sorted part."}
+{"topic":"Regularization","level":"intermediate","style":"conceptual","explanation":"Regularization reduces overfitting by adding a penalty for large model parameters."}
+{"topic":"Trees in Data Structures","level":"beginner","style":"example-based","explanation":"A tree is a hierarchical data structure with a root node and child nodes forming parent-child relationships."}
+{"topic":"Faraday’s Law","level":"intermediate","style":"conceptual","explanation":"Faraday’s Law states that a changing magnetic field induces an electromotive force in a conductor."}
+{"topic":"Loops in Programming","level":"beginner","style":"simple","explanation":"Loops allow a block of code to run repeatedly until a condition is satisfied."}
+{"topic":"Internet Protocol","level":"beginner","style":"simple","explanation":"The Internet Protocol is responsible for addressing and routing data packets across networks."}
+{"topic":"Expected Value","level":"beginner","style":"intuitive","explanation":"Expected value represents the average outcome of a random process over many trials."}
+{"topic":"Functional Dependency","level":"intermediate","style":"conceptual","explanation":"A functional dependency describes the relationship where one set of attributes determines another in a database."}
+{"topic":"Deadlock","level":"intermediate","style":"conceptual","explanation":"Deadlock occurs when processes wait indefinitely for resources held by each other."}
+{"topic":"Impulse","level":"beginner","style":"simple","explanation":"Impulse is the product of force and the time over which it acts, causing a change in momentum."}
+{"topic":"Insertion Sort","level":"beginner","style":"step-by-step","explanation":"Insertion sort builds the sorted list one element at a time by inserting elements into their correct position."}
+{"topic":"Learning Rate","level":"intermediate","style":"conceptual","explanation":"The learning rate controls how much model parameters are adjusted during training."}
+{"topic":"Graphs in Data Structures","level":"beginner","style":"example-based","explanation":"A graph consists of vertices and edges used to represent relationships between entities."}
+{"topic":"Pascal’s Law","level":"beginner","style":"simple","explanation":"Pascal’s Law states that pressure applied to a confined fluid is transmitted equally in all directions."}
+{"topic":"Multithreading","level":"intermediate","style":"conceptual","explanation":"Multithreading allows a program to execute multiple threads concurrently for better performance."}
+{"topic":"Domain Name System","level":"beginner","style":"simple","explanation":"The Domain Name System translates human-readable domain names into IP addresses."}
+{"topic":"Standard Deviation","level":"beginner","style":"intuitive","explanation":"Standard deviation measures how spread out values are from the mean."}
+{"topic":"Boyce-Codd Normal Form","level":"intermediate","style":"conceptual","explanation":"BCNF is a database normalization form that reduces redundancy by enforcing stricter functional dependencies."}
+{"topic":"Livelock","level":"intermediate","style":"conceptual","explanation":"Livelock occurs when processes continuously change state in response to each other without making progress."}
+{"topic":"Elastic Collision","level":"beginner","style":"simple","explanation":"In an elastic collision, both momentum and kinetic energy are conserved."}
+{"topic":"Bucket Sort","level":"beginner","style":"step-by-step","explanation":"Bucket sort distributes elements into buckets, sorts each bucket, and then combines them."}
+{"topic":"Loss Function","level":"intermediate","style":"conceptual","explanation":"A loss function measures how far a model’s predictions are from the actual values."}
+{"topic":"Binary Trees","level":"beginner","style":"example-based","explanation":"A binary tree is a tree data structure where each node has at most two children."}
+{"topic":"Archimedes’ Principle","level":"beginner","style":"simple","explanation":"Archimedes’ principle states that an object immersed in a fluid experiences an upward buoyant force equal to the weight of displaced fluid."}
+{"topic":"Context Switching","level":"intermediate","style":"conceptual","explanation":"Context switching is the process of storing and restoring the state of a CPU so multiple processes can share it."}
+{"topic":"HTTP Protocol","level":"beginner","style":"simple","explanation":"HTTP is a protocol used for transferring data over the web between clients and servers."}
+{"topic":"Variance","level":"beginner","style":"intuitive","explanation":"Variance measures how far values in a dataset are spread out from the mean."}
+{"topic":"Third Normal Form","level":"intermediate","style":"conceptual","explanation":"Third Normal Form removes transitive dependencies to further reduce redundancy in database tables."}
+{"topic":"Starvation","level":"intermediate","style":"conceptual","explanation":"Starvation occurs when a process never gets required resources because others keep taking them."}
+{"topic":"Torque","level":"beginner","style":"simple","explanation":"Torque measures the tendency of a force to rotate an object around an axis."}
+{"topic":"Radix Sort","level":"beginner","style":"step-by-step","explanation":"Radix sort processes numbers digit by digit, grouping them based on place value."}
+{"topic":"Principal Component Analysis","level":"intermediate","style":"conceptual","explanation":"PCA reduces dimensionality by transforming data into uncorrelated components that capture most variance."}
+{"topic":"Priority Queue","level":"beginner","style":"example-based","explanation":"A priority queue removes elements based on priority rather than insertion order."}
+{"topic":"Poisson Distribution","level":"intermediate","style":"intuitive","explanation":"The Poisson distribution models the number of events occurring in a fixed interval of time or space."}
+{"topic":"Process States","level":"beginner","style":"simple","explanation":"Process states describe the different stages a process goes through during execution in an operating system."}
+{"topic":"Determinant of a Matrix","level":"intermediate","style":"conceptual","explanation":"The determinant is a scalar value that provides information about a matrix, such as invertibility."}
+{"topic":"Network Topologies","level":"beginner","style":"simple","explanation":"Network topologies describe the physical or logical arrangement of devices in a network."}
+{"topic":"Fourth Normal Form","level":"intermediate","style":"conceptual","explanation":"Fourth Normal Form removes multivalued dependencies to further reduce redundancy."}
+{"topic":"Priority Scheduling","level":"intermediate","style":"conceptual","explanation":"Priority scheduling allocates CPU time to processes based on their priority levels."}
+{"topic":"Centripetal Force","level":"beginner","style":"simple","explanation":"Centripetal force keeps an object moving in a circular path by constantly pulling it toward the center."}
+{"topic":"Interpolation Search","level":"intermediate","style":"step-by-step","explanation":"Interpolation search estimates the position of a target value based on its value relative to the range."}
+{"topic":"Ensemble Learning","level":"intermediate","style":"conceptual","explanation":"Ensemble learning combines multiple models to improve prediction accuracy and robustness."}
+{"topic":"Adjacency Matrix","level":"beginner","style":"example-based","explanation":"An adjacency matrix represents a graph using a matrix where entries indicate connections between vertices."}
+{"topic":"Harmonic Mean","level":"beginner","style":"intuitive","explanation":"The harmonic mean is useful for averaging rates and is calculated as the reciprocal of the average of reciprocals."}
+{"topic":"Banker’s Algorithm","level":"intermediate","style":"conceptual","explanation":"Banker’s algorithm avoids deadlock by allocating resources only if the system remains in a safe state."}
+{"topic":"Critical Section","level":"beginner","style":"simple","explanation":"A critical section is a part of code that must not be executed by more than one thread at a time."}
+{"topic":"Matrix Transpose","level":"beginner","style":"step-by-step","explanation":"Matrix transpose is obtained by converting rows into columns and columns into rows."}
+{"topic":"Peer-to-Peer Networks","level":"beginner","style":"simple","explanation":"Peer-to-peer networks allow devices to share resources directly without a central server."}
+{"topic":"Indexing in Databases","level":"intermediate","style":"conceptual","explanation":"Indexing improves database performance by enabling faster access to records using indexed attributes."}
+{"topic":"Coriolis Force","level":"intermediate","style":"conceptual","explanation":"Coriolis force is an apparent force caused by the rotation of a reference frame, affecting moving objects."}
+{"topic":"Jump Search","level":"beginner","style":"step-by-step","explanation":"Jump search moves ahead by fixed steps in a sorted array to locate a target efficiently."}
+{"topic":"ROC Curve","level":"intermediate","style":"conceptual","explanation":"The ROC curve shows the tradeoff between true positive rate and false positive rate across thresholds."}
+{"topic":"Incidence Matrix","level":"beginner","style":"example-based","explanation":"An incidence matrix represents relationships between vertices and edges in a graph."}
+{"topic":"Geometric Mean","level":"beginner","style":"intuitive","explanation":"The geometric mean is useful for averaging ratios and growth rates."}
+{"topic":"Readers-Writers Problem","level":"intermediate","style":"conceptual","explanation":"The readers-writers problem addresses synchronization when multiple readers and writers access shared data."}
+{"topic":"Semaphore","level":"beginner","style":"simple","explanation":"A semaphore is a synchronization tool that controls access to shared resources using counters."}
+{"topic":"LU Decomposition","level":"intermediate","style":"conceptual","explanation":"LU decomposition factors a matrix into lower and upper triangular matrices for efficient solving."}
+{"topic":"Load Balancing","level":"beginner","style":"simple","explanation":"Load balancing distributes workload across servers to improve performance and reliability."}
+{"topic":"Multiversion Concurrency Control","level":"intermediate","style":"conceptual","explanation":"MVCC allows concurrent database transactions by maintaining multiple versions of data items."}
+{"topic":"Precession","level":"intermediate","style":"conceptual","explanation":"Precession is the gradual change in the orientation of a rotating object's axis."}
+{"topic":"Exponential Search","level":"intermediate","style":"step-by-step","explanation":"Exponential search finds a range where the target lies and then applies binary search within it."}
+{"topic":"Precision and Recall","level":"beginner","style":"conceptual","explanation":"Precision measures correctness of positive predictions, while recall measures coverage of actual positives."}
+{"topic":"Adjacency List","level":"beginner","style":"example-based","explanation":"An adjacency list represents a graph by storing lists of neighbors for each vertex."}
+{"topic":"Root Mean Square","level":"beginner","style":"intuitive","explanation":"Root mean square provides an effective value for varying quantities, especially in signals."}
+{"topic":"Dining Philosophers Problem","level":"intermediate","style":"conceptual","explanation":"The dining philosophers problem illustrates synchronization challenges when sharing limited resources."}
+{"topic":"Monitor","level":"beginner","style":"simple","explanation":"A monitor is a synchronization construct that controls access to shared resources."}
+{"topic":"QR Decomposition","level":"intermediate","style":"conceptual","explanation":"QR decomposition factors a matrix into an orthogonal matrix and an upper triangular matrix."}
+{"topic":"Circuit Switching","level":"beginner","style":"simple","explanation":"Circuit switching establishes a dedicated communication path before data transmission."}
+{"topic":"Snapshot Isolation","level":"intermediate","style":"conceptual","explanation":"Snapshot isolation allows transactions to work on a consistent snapshot of the database."}
+{"topic":"Rolling Motion","level":"beginner","style":"simple","explanation":"Rolling motion combines both translational and rotational motion without slipping."}
+{"topic":"Fibonacci Search","level":"intermediate","style":"step-by-step","explanation":"Fibonacci search uses Fibonacci numbers to divide the search space in a sorted array."}
+{"topic":"Confusion Matrix","level":"beginner","style":"conceptual","explanation":"A confusion matrix summarizes prediction results by comparing actual and predicted classes."}
+{"topic":"Cartesian Tree","level":"intermediate","style":"example-based","explanation":"A Cartesian tree combines heap and binary search tree properties based on array values."}
+{"topic":"Probability Density Function","level":"intermediate","style":"intuitive","explanation":"A probability density function describes the likelihood of a continuous random variable taking a specific value."}
+{"topic":"Barrier Synchronization","level":"intermediate","style":"conceptual","explanation":"Barrier synchronization forces threads to wait until all have reached a certain execution point."}
+{"topic":"Critical Path Method","level":"beginner","style":"simple","explanation":"CPM is a project management technique used to identify the longest sequence of dependent tasks."}
+{"topic":"Cholesky Decomposition","level":"intermediate","style":"conceptual","explanation":"Cholesky decomposition factors a matrix into a lower triangular matrix and its transpose."}
+{"topic":"Packet Switching","level":"beginner","style":"simple","explanation":"Packet switching breaks data into packets that are routed independently across a network."}
+{"topic":"Serializable Schedules","level":"intermediate","style":"conceptual","explanation":"Serializable schedules ensure that concurrent transaction execution produces results equivalent to serial execution."}
+{"topic":"Relative Velocity","level":"beginner","style":"simple","explanation":"Relative velocity describes the velocity of one object as observed from the frame of reference of another object."}
+{"topic":"Ternary Search","level":"intermediate","style":"step-by-step","explanation":"Ternary search divides a sorted array into three parts to locate a target value efficiently."}
+{"topic":"F1 Score","level":"beginner","style":"conceptual","explanation":"The F1 score balances precision and recall into a single performance measure."}
+{"topic":"Treaps","level":"intermediate","style":"example-based","explanation":"A treap is a randomized data structure combining binary search tree and heap properties."}
+{"topic":"Cumulative Distribution Function","level":"intermediate","style":"intuitive","explanation":"A cumulative distribution function gives the probability that a random variable is less than or equal to a value."}
+{"topic":"Lock-Based Concurrency","level":"beginner","style":"simple","explanation":"Lock-based concurrency controls access to shared resources using mutual exclusion locks."}
+{"topic":"Network Latency","level":"beginner","style":"simple","explanation":"Network latency is the time taken for data to travel from source to destination."}
+{"topic":"Eigen Decomposition","level":"intermediate","style":"conceptual","explanation":"Eigen decomposition represents a matrix in terms of its eigenvalues and eigenvectors."}
+{"topic":"Message-Oriented Middleware","level":"beginner","style":"simple","explanation":"Message-oriented middleware enables asynchronous communication between distributed systems."}
+{"topic":"Recoverable Schedules","level":"intermediate","style":"conceptual","explanation":"Recoverable schedules ensure that committed transactions depend only on other committed transactions."}
