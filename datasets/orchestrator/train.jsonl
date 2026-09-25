@@ -1,0 +1,100 @@
+{"text":"User request: I have an exam on Queueing Theory in 3 days.\nAgent: scheduler\nInstruction: Create a 3-day study plan covering queueing models, Little’s law, and performance metrics."}
+{"text":"User request: Explain dynamic programming from scratch.\nAgent: pedagogy\nInstruction: Provide a beginner-friendly explanation of dynamic programming with examples."}
+{"text":"User request: Test my knowledge on Operating Systems.\nAgent: quiz\nInstruction: Generate a short quiz on processes, threads, and scheduling algorithms."}
+{"text":"User request: I need to finish database revision tomorrow night.\nAgent: scheduler\nInstruction: Create a one-day evening study schedule for database concepts."}
+{"text":"User request: Teach me Kafka Streams and then check my understanding.\nAgent: pedagogy\nInstruction: Explain Kafka Streams concepts with examples before assessment."}
+{"text":"User request: I have 30 minutes to understand recursion.\nAgent: pedagogy\nInstruction: Give a concise explanation of recursion with one simple example."}
+{"text":"User request: I want to know if I am ready for my CN exam.\nAgent: quiz\nInstruction: Assess exam readiness with conceptual and applied questions on Computer Networks."}
+{"text":"User request: I have an Artificial Intelligence test in 5 days.\nAgent: scheduler\nInstruction: Create a 5-day AI study plan from basics to applications."}
+{"text":"User request: Explain stacks in a simple way.\nAgent: pedagogy\nInstruction: Explain stack data structure using real-life analogies."}
+{"text":"User request: Quiz me on core Java concepts.\nAgent: quiz\nInstruction: Generate questions on OOP, inheritance, and exceptions."}
+{"text":"User request: I need to revise Machine Learning this week.\nAgent: scheduler\nInstruction: Create a 7-day revision plan for ML fundamentals."}
+{"text":"User request: Explain deadlock in operating systems.\nAgent: pedagogy\nInstruction: Explain deadlock conditions, prevention, and avoidance."}
+{"text":"User request: Test my DBMS concepts.\nAgent: quiz\nInstruction: Generate questions on normalization, transactions, and indexing."}
+{"text":"User request: I have a Software Engineering exam in 4 days.\nAgent: scheduler\nInstruction: Create a 4-day study plan covering SDLC models and metrics."}
+{"text":"User request: Explain greedy algorithms.\nAgent: pedagogy\nInstruction: Explain greedy strategy with classic algorithm examples."}
+{"text":"User request: Teach me pointers in C.\nAgent: pedagogy\nInstruction: Explain pointers with memory diagrams and examples."}
+{"text":"User request: Check my Python basics.\nAgent: quiz\nInstruction: Generate a beginner-level Python quiz."}
+{"text":"User request: I want a quick OS crash course.\nAgent: scheduler\nInstruction: Create a 2-day intensive study plan for OS fundamentals."}
+{"text":"User request: Explain virtual memory clearly.\nAgent: pedagogy\nInstruction: Explain paging, segmentation, and page replacement."}
+{"text":"User request: Test my Linux knowledge.\nAgent: quiz\nInstruction: Generate questions on commands, processes, and file systems."}
+{"text":"User request: I have a compiler design exam soon.\nAgent: scheduler\nInstruction: Create a 3-day study plan for compiler phases."}
+{"text":"User request: Explain lexical analysis.\nAgent: pedagogy\nInstruction: Explain tokens, lexemes, and lexical analyzers."}
+{"text":"User request: Quiz me on Theory of Computation.\nAgent: quiz\nInstruction: Generate questions on DFA, NFA, and Turing machines."}
+{"text":"User request: I want to study cloud computing in 3 days.\nAgent: scheduler\nInstruction: Create a 3-day plan covering IaaS, PaaS, and SaaS."}
+{"text":"User request: Explain virtualization.\nAgent: pedagogy\nInstruction: Explain virtualization concepts and hypervisors."}
+{"text":"User request: Test my Docker knowledge.\nAgent: quiz\nInstruction: Generate questions on Docker images and containers."}
+{"text":"User request: I have a networking exam next week.\nAgent: scheduler\nInstruction: Create a structured study plan for networking concepts."}
+{"text":"User request: Explain TCP vs UDP.\nAgent: pedagogy\nInstruction: Compare TCP and UDP with use cases."}
+{"text":"User request: Quiz me on routing algorithms.\nAgent: quiz\nInstruction: Generate questions on distance vector and link state routing."}
+{"text":"User request: I want to learn IoT basics in 2 days.\nAgent: scheduler\nInstruction: Create a 2-day learning plan for IoT architecture."}
+{"text":"User request: Explain sensors used in IoT.\nAgent: pedagogy\nInstruction: Explain common sensors and their working principles."}
+{"text":"User request: Test my embedded systems knowledge.\nAgent: quiz\nInstruction: Generate questions on microcontrollers and interrupts."}
+{"text":"User request: I need to revise data structures.\nAgent: scheduler\nInstruction: Create a revision plan for arrays, lists, and stacks."}
+{"text":"User request: Explain tree data structures.\nAgent: pedagogy\nInstruction: Explain trees, traversals, and applications."}
+{"text":"User request: Quiz me on graph theory.\nAgent: quiz\nInstruction: Generate questions on graphs and traversals."}
+{"text":"User request: I have an algorithms exam in 3 days.\nAgent: scheduler\nInstruction: Create a 3-day algorithm revision plan."}
+{"text":"User request: Explain sorting algorithms.\nAgent: pedagogy\nInstruction: Explain common sorting algorithms with complexity."}
+{"text":"User request: Test my searching algorithms knowledge.\nAgent: quiz\nInstruction: Generate questions on linear and binary search."}
+{"text":"User request: I want to study cybersecurity basics.\nAgent: scheduler\nInstruction: Create a 4-day study plan for cybersecurity fundamentals."}
+{"text":"User request: Explain cryptography basics.\nAgent: pedagogy\nInstruction: Explain encryption, decryption, and hashing."}
+{"text":"User request: Quiz me on encryption techniques.\nAgent: quiz\nInstruction: Generate questions on symmetric and asymmetric encryption."}
+{"text":"User request: I need to learn web development this week.\nAgent: scheduler\nInstruction: Create a beginner-friendly web development study plan."}
+{"text":"User request: Explain HTML and CSS.\nAgent: pedagogy\nInstruction: Explain HTML structure and CSS styling basics."}
+{"text":"User request: Test my JavaScript basics.\nAgent: quiz\nInstruction: Generate questions on variables, functions, and events."}
+{"text":"User request: I want to learn mobile app development.\nAgent: scheduler\nInstruction: Create a learning plan for mobile app fundamentals."}
+{"text":"User request: Explain Android components.\nAgent: pedagogy\nInstruction: Explain activities, services, and intents."}
+{"text":"User request: Quiz me on mobile testing.\nAgent: quiz\nInstruction: Generate questions on mobile app testing techniques."}
+{"text":"User request: I want to study NLP in 3 days.\nAgent: scheduler\nInstruction: Create a 3-day plan for NLP basics."}
+{"text":"User request: Explain tokenization in NLP.\nAgent: pedagogy\nInstruction: Explain tokenization with examples."}
+{"text":"User request: Test my NLP knowledge.\nAgent: quiz\nInstruction: Generate questions on NLP concepts."}
+{"text":"User request: I need to learn image processing basics.\nAgent: scheduler\nInstruction: Create a study plan for image processing fundamentals."}
+{"text":"User request: Explain image filters.\nAgent: pedagogy\nInstruction: Explain smoothing and edge detection filters."}
+{"text":"User request: Quiz me on computer vision.\nAgent: quiz\nInstruction: Generate questions on CV basics."}
+{"text":"User request: I want to revise big data concepts.\nAgent: scheduler\nInstruction: Create a revision plan for big data fundamentals."}
+{"text":"User request: Explain Hadoop ecosystem.\nAgent: pedagogy\nInstruction: Explain HDFS, MapReduce, and YARN."}
+{"text":"User request: Test my Spark knowledge.\nAgent: quiz\nInstruction: Generate questions on Spark architecture."}
+{"text":"User request: I have a distributed systems exam.\nAgent: scheduler\nInstruction: Create a focused study plan for distributed systems."}
+{"text":"User request: Explain consistency models.\nAgent: pedagogy\nInstruction: Explain strong and eventual consistency."}
+{"text":"User request: Quiz me on CAP theorem.\nAgent: quiz\nInstruction: Generate questions on consistency, availability, and partition tolerance."}
+{"text":"User request: I want to revise software testing.\nAgent: scheduler\nInstruction: Create a revision plan for testing methodologies."}
+{"text":"User request: Explain unit testing.\nAgent: pedagogy\nInstruction: Explain unit testing with examples."}
+{"text":"User request: Test my testing knowledge.\nAgent: quiz\nInstruction: Generate questions on manual and automated testing."}
+{"text":"User request: I want to learn HCI concepts.\nAgent: scheduler\nInstruction: Create a short learning plan for HCI."}
+{"text":"User request: Explain usability principles.\nAgent: pedagogy\nInstruction: Explain usability and user-centered design."}
+{"text":"User request: Quiz me on UX design.\nAgent: quiz\nInstruction: Generate questions on UX principles."}
+{"text":"User request: I need to understand database indexing.\nAgent: scheduler\nInstruction: Create a focused study plan on indexing."}
+{"text":"User request: Explain B-trees.\nAgent: pedagogy\nInstruction: Explain B-trees and their use in databases."}
+{"text":"User request: Test my indexing knowledge.\nAgent: quiz\nInstruction: Generate questions on indexing techniques."}
+{"text":"User request: I want to study reinforcement learning.\nAgent: scheduler\nInstruction: Create a beginner-friendly RL study plan."}
+{"text":"User request: Explain Q-learning.\nAgent: pedagogy\nInstruction: Explain Q-learning with an example."}
+{"text":"User request: Quiz me on reinforcement learning.\nAgent: quiz\nInstruction: Generate questions on RL basics."}
+{"text":"User request: I want to learn AI ethics.\nAgent: scheduler\nInstruction: Create a short study plan on AI ethics."}
+{"text":"User request: Explain bias in AI.\nAgent: pedagogy\nInstruction: Explain bias and fairness in AI systems."}
+{"text":"User request: Test my ethics knowledge.\nAgent: quiz\nInstruction: Generate questions on ethical AI practices."}
+{"text":"User request: I want to learn DevOps basics.\nAgent: scheduler\nInstruction: Create a DevOps fundamentals study plan."}
+{"text":"User request: Explain CI/CD.\nAgent: pedagogy\nInstruction: Explain continuous integration and deployment."}
+{"text":"User request: Quiz me on DevOps.\nAgent: quiz\nInstruction: Generate questions on DevOps tools and practices."}
+{"text":"User request: I need to understand version control.\nAgent: scheduler\nInstruction: Create a learning plan for version control systems."}
+{"text":"User request: Explain Git basics.\nAgent: pedagogy\nInstruction: Explain Git concepts and workflow."}
+{"text":"User request: Test my Git knowledge.\nAgent: quiz\nInstruction: Generate questions on Git commands."}
+{"text":"User request: I want to study microservices.\nAgent: scheduler\nInstruction: Create a study plan for microservices architecture."}
+{"text":"User request: Explain REST APIs.\nAgent: pedagogy\nInstruction: Explain REST principles and methods."}
+{"text":"User request: Quiz me on REST APIs.\nAgent: quiz\nInstruction: Generate questions on REST design."}
+{"text":"User request: I want to improve performance tuning skills.\nAgent: scheduler\nInstruction: Create a focused study plan for performance tuning."}
+{"text":"User request: Explain caching.\nAgent: pedagogy\nInstruction: Explain caching strategies and benefits."}
+{"text":"User request: Test my performance knowledge.\nAgent: quiz\nInstruction: Generate questions on performance optimization."}
+{"text":"User request: I feel anxious before exams.\nAgent: scheduler\nInstruction: Create a short stress-aware revision schedule."}
+{"text":"User request: Explain effective study techniques.\nAgent: pedagogy\nInstruction: Explain proven study and revision techniques."}
+{"text":"User request: Check if I am exam-ready.\nAgent: quiz\nInstruction: Generate a mixed-difficulty readiness quiz."}
+{"text":"User request: I have one last day before exams.\nAgent: scheduler\nInstruction: Create a last-day revision strategy."}
+{"text":"User request: Explain probability basics.\nAgent: pedagogy\nInstruction: Explain probability concepts with examples."}
+{"text":"User request: Quiz me on statistics.\nAgent: quiz\nInstruction: Generate questions on mean, median, and variance."}
+{"text":"User request: I need to revise linear algebra.\nAgent: scheduler\nInstruction: Create a revision plan for linear algebra basics."}
+{"text":"User request: Explain matrices.\nAgent: pedagogy\nInstruction: Explain matrices and operations."}
+{"text":"User request: Test my linear algebra knowledge.\nAgent: quiz\nInstruction: Generate questions on vectors and matrices."}
+{"text":"User request: I want to learn quantum computing basics.\nAgent: scheduler\nInstruction: Create a beginner-friendly quantum computing plan."}
+{"text":"User request: Explain qubits.\nAgent: pedagogy\nInstruction: Explain qubits and superposition."}
+{"text":"User request: Quiz me on quantum basics.\nAgent: quiz\nInstruction: Generate introductory quantum computing questions."}
+{"text":"User request: I need interview preparation help.\nAgent: scheduler\nInstruction: Create a structured interview preparation plan."}
+{"text":"User request: Conduct a mock interview.\nAgent: quiz\nInstruction: Ask mock interview questions and evaluate answers."}

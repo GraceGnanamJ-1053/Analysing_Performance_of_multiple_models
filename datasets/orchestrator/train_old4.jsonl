@@ -1,0 +1,120 @@
+{"prompt":"Goal: Plan and explain before testing\nTopic: Laws of Thermodynamics\nTime available: Not specified","target":"Agent: scheduler","Instruction":"Create a 4-day study schedule explaining each law with daily revisions."}
+{"prompt":"Goal: Concept explanation only\nTopic: Dynamic Programming\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain dynamic programming concepts with simple examples."}
+{"prompt":"Goal: Assess readiness for exam\nTopic: Database Management Systems\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate a short quiz to assess exam readiness."}
+{"prompt":"Goal: Focused study planning\nTopic: Product Design\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day focused study plan emphasizing key design concepts."}
+{"prompt":"Goal: End-to-end learning task\nTopic: Distributed Shared Memory\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Teach the topic step by step from basics to advanced concepts."}
+{"prompt":"Goal: Revision before exam\nTopic: Operating Systems\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Prepare a 3-day revision plan covering core OS concepts."}
+{"prompt":"Goal: Learn fundamentals\nTopic: Computer Networks\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain basic networking concepts using real-world analogies."}
+{"prompt":"Goal: Evaluate understanding\nTopic: Data Structures\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create a quiz covering arrays, stacks, queues, and linked lists."}
+{"prompt":"Goal: Intensive preparation\nTopic: Machine Learning\nTime available: 5 days","target":"Agent: scheduler","Instruction":"Design a 5-day crash course covering ML fundamentals."}
+{"prompt":"Goal: Concept mastery\nTopic: Graph Theory\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain graph concepts with diagrams and examples."}
+{"prompt":"Goal: Self-assessment\nTopic: Software Engineering\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate conceptual questions to test software engineering knowledge."}
+{"prompt":"Goal: Study planning\nTopic: Artificial Intelligence\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Create a 4-day AI study plan from basics to applications."}
+{"prompt":"Goal: Understand theory\nTopic: Compiler Design\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain compiler phases with simple illustrations."}
+{"prompt":"Goal: Quick test\nTopic: Probability and Statistics\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create a short quiz covering probability basics."}
+{"prompt":"Goal: Structured learning\nTopic: Cloud Computing\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Plan a 3-day learning schedule covering cloud service models."}
+{"prompt":"Goal: Concept explanation\nTopic: Linear Algebra\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain vectors, matrices, and linear transformations simply."}
+{"prompt":"Goal: Knowledge check\nTopic: Digital Electronics\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate multiple-choice questions on logic gates."}
+{"prompt":"Goal: Exam preparation\nTopic: Microprocessors\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day revision plan focusing on architecture and instruction sets."}
+{"prompt":"Goal: Deep understanding\nTopic: Theory of Computation\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain automata theory from DFA to Turing Machines."}
+{"prompt":"Goal: Test conceptual clarity\nTopic: Object-Oriented Programming\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create conceptual questions on OOP principles."}
+{"prompt":"Goal: Learning roadmap\nTopic: Cyber Security\nTime available: 5 days","target":"Agent: scheduler","Instruction":"Prepare a 5-day study roadmap covering cyber security basics."}
+{"prompt":"Goal: Conceptual learning\nTopic: Cryptography\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain encryption, decryption, and hashing concepts."}
+{"prompt":"Goal: Practice evaluation\nTopic: SQL\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate SQL queries-based questions."}
+{"prompt":"Goal: Time-bound preparation\nTopic: Embedded Systems\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Design a 3-day plan focusing on embedded system fundamentals."}
+{"prompt":"Goal: Step-by-step learning\nTopic: Image Processing\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain image processing concepts from basics to filters."}
+{"prompt":"Goal: Knowledge assessment\nTopic: Python Programming\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create beginner-level Python quiz questions."}
+{"prompt":"Goal: Study organization\nTopic: Internet of Things\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Create a 4-day study plan covering IoT architecture and protocols."}
+{"prompt":"Goal: Concept explanation\nTopic: Data Mining\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain data mining techniques with examples."}
+{"prompt":"Goal: Readiness check\nTopic: Computer Architecture\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate exam-oriented questions on CPU organization."}
+{"prompt":"Goal: Accelerated learning\nTopic: Big Data Analytics\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Design a 3-day accelerated learning plan for big data concepts."}
+{"prompt":"Goal: Foundational learning\nTopic: Blockchain Technology\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain blockchain concepts and working mechanism."}
+{"prompt":"Goal: Quick self-test\nTopic: Java Programming\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create quiz questions covering core Java concepts."}
+{"prompt":"Goal: Study timeline creation\nTopic: Software Testing\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Prepare a 2-day study plan covering testing methodologies."}
+{"prompt":"Goal: Concept walkthrough\nTopic: Neural Networks\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain neural network basics with intuitive explanations."}
+{"prompt":"Goal: Exam simulation\nTopic: Web Technologies\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate mixed questions on HTML, CSS, and JavaScript."}
+{"prompt":"Goal: Structured preparation\nTopic: Mobile Application Development\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Create a 4-day plan covering Android app development basics."}
+{"prompt":"Goal: Learn concepts\nTopic: Parallel Computing\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain parallel computing models and architectures."}
+{"prompt":"Goal: Concept check\nTopic: Discrete Mathematics\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create questions on logic, sets, and relations."}
+{"prompt":"Goal: Focused learning\nTopic: Human Computer Interaction\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Design a 2-day focused study plan on HCI principles."}
+{"prompt":"Goal: Detailed explanation\nTopic: Reinforcement Learning\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain reinforcement learning concepts step by step."}
+{"prompt":"Goal: Evaluate preparedness\nTopic: Computer Graphics\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on graphics pipelines and transformations."}
+{"prompt":"Goal: Exam-oriented planning\nTopic: Numerical Methods\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day exam-oriented study plan."}
+{"prompt":"Goal: Conceptual clarity\nTopic: Natural Language Processing\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain NLP pipeline and core techniques."}
+{"prompt":"Goal: Knowledge testing\nTopic: Linux Operating System\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create practical and conceptual Linux questions."}
+{"prompt":"Goal: Learning schedule\nTopic: Ethics in AI\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Design a 2-day learning plan focusing on AI ethics."}
+{"prompt":"Goal: Simplified learning\nTopic: Fuzzy Logic\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain fuzzy logic concepts using simple examples."}
+{"prompt":"Goal: Concept verification\nTopic: Design Patterns\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on common software design patterns."}
+{"prompt":"Goal: Study structuring\nTopic: Digital Signal Processing\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Create a 4-day structured study plan for DSP."}
+{"prompt":"Goal: Topic walkthrough\nTopic: Quantum Computing\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain quantum computing basics in an intuitive manner."}
+{"prompt":"Goal: Exam readiness\nTopic: Data Warehousing\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create exam-oriented questions on data warehousing concepts."}
+{"prompt":"Goal: Plan revision\nTopic: Algorithms Analysis\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day revision plan focusing on time and space complexity."}
+{"prompt":"Goal: Concept explanation\nTopic: Greedy Algorithms\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain greedy algorithms with clear examples."}
+{"prompt":"Goal: Exam self-check\nTopic: Relational Algebra\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions to test relational algebra understanding."}
+{"prompt":"Goal: Structured learning\nTopic: UML Diagrams\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day plan covering all major UML diagrams."}
+{"prompt":"Goal: End-to-end explanation\nTopic: Memory Management\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain memory management techniques in operating systems."}
+{"prompt":"Goal: Knowledge assessment\nTopic: Software Project Management\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate conceptual questions on project planning and estimation."}
+{"prompt":"Goal: Time-bound preparation\nTopic: C Programming\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day study plan focusing on C fundamentals."}
+{"prompt":"Goal: Conceptual clarity\nTopic: Recursion\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain recursion using simple step-by-step examples."}
+{"prompt":"Goal: Practice evaluation\nTopic: Pointers in C\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions testing understanding of pointers."}
+{"prompt":"Goal: Exam preparation\nTopic: Finite Automata\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Design a 2-day revision plan for finite automata."}
+{"prompt":"Goal: Simplified explanation\nTopic: Deadlock in OS\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain deadlock conditions and prevention methods."}
+{"prompt":"Goal: Readiness check\nTopic: Java Memory Model\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create questions on heap, stack, and garbage collection."}
+{"prompt":"Goal: Study roadmap\nTopic: RESTful APIs\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day learning roadmap for REST APIs."}
+{"prompt":"Goal: Concept explanation\nTopic: Virtualization\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain virtualization and hypervisors with examples."}
+{"prompt":"Goal: Knowledge testing\nTopic: TCP/IP Model\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions covering TCP/IP layers."}
+{"prompt":"Goal: Focused learning\nTopic: NoSQL Databases\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Prepare a 3-day focused study plan on NoSQL databases."}
+{"prompt":"Goal: Topic walkthrough\nTopic: Indexing in Databases\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain indexing techniques and their advantages."}
+{"prompt":"Goal: Exam simulation\nTopic: Software Metrics\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on software quality metrics."}
+{"prompt":"Goal: Structured preparation\nTopic: DevOps Fundamentals\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Design a 4-day study plan covering DevOps tools and practices."}
+{"prompt":"Goal: Concept mastery\nTopic: Version Control Systems\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain version control concepts using Git as example."}
+{"prompt":"Goal: Concept verification\nTopic: Deadlock Avoidance\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on deadlock avoidance algorithms."}
+{"prompt":"Goal: Short-term planning\nTopic: Shell Scripting\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day learning plan for shell scripting basics."}
+{"prompt":"Goal: Clear explanation\nTopic: Paging and Segmentation\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain paging and segmentation with diagrams."}
+{"prompt":"Goal: Readiness assessment\nTopic: CAP Theorem\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate conceptual questions on CAP theorem."}
+{"prompt":"Goal: Learning organization\nTopic: Web Security\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day learning plan focusing on web security threats."}
+{"prompt":"Goal: Foundational understanding\nTopic: Hashing Techniques\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain hashing techniques and collision handling."}
+{"prompt":"Goal: Knowledge check\nTopic: Multithreading\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on threads and synchronization."}
+{"prompt":"Goal: Exam-oriented study\nTopic: Computer Organization\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Prepare a 4-day exam-oriented study plan."}
+{"prompt":"Goal: Stepwise learning\nTopic: Heuristic Search\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain heuristic search algorithms with examples."}
+{"prompt":"Goal: Self-evaluation\nTopic: HTTP Protocol\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on HTTP methods and status codes."}
+{"prompt":"Goal: Focused revision\nTopic: Linear Search and Binary Search\nTime available: 1 day","target":"Agent: scheduler","Instruction":"Create a 1-day revision plan comparing both search techniques."}
+{"prompt":"Goal: Concept explanation\nTopic: Scheduling Algorithms\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain CPU scheduling algorithms with examples."}
+{"prompt":"Goal: Exam practice\nTopic: Normalization\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate normalization-based DBMS questions."}
+{"prompt":"Goal: Learning schedule\nTopic: Agile Methodology\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Design a 2-day learning schedule for Agile principles."}
+{"prompt":"Goal: Simplified walkthrough\nTopic: Bayesian Networks\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain Bayesian networks in a simple manner."}
+{"prompt":"Goal: Create a preparation strategy\nTopic: Advanced Data Structures\nTime available: 6 days","target":"Agent: scheduler","Instruction":"Design a 6-day preparation strategy covering advanced data structures."}
+{"prompt":"Goal: Understand working principles\nTopic: Load Balancing\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain how load balancing works with practical examples."}
+{"prompt":"Goal: Measure conceptual strength\nTopic: Software Architecture Styles\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions testing knowledge of architectural styles."}
+{"prompt":"Goal: Short-term learning plan\nTopic: Computer Vision Basics\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day beginner-friendly study plan for computer vision."}
+{"prompt":"Goal: Concept walkthrough\nTopic: Feature Engineering\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain feature engineering techniques used in machine learning."}
+{"prompt":"Goal: Skill evaluation\nTopic: REST API Design\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create questions to assess REST API design understanding."}
+{"prompt":"Goal: Learning breakdown\nTopic: Distributed Systems\nTime available: 5 days","target":"Agent: scheduler","Instruction":"Break down distributed systems learning into a 5-day plan."}
+{"prompt":"Goal: Simplified explanation\nTopic: Consensus Algorithms\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain consensus algorithms like Paxos and Raft simply."}
+{"prompt":"Goal: Exam-oriented testing\nTopic: Exception Handling\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions focusing on exception handling concepts."}
+{"prompt":"Goal: Topic-wise study plan\nTopic: Advanced Java\nTime available: 4 days","target":"Agent: scheduler","Instruction":"Prepare a 4-day topic-wise study plan for advanced Java."}
+{"prompt":"Goal: Concept clarity\nTopic: Dependency Injection\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain dependency injection with real-world examples."}
+{"prompt":"Goal: Readiness verification\nTopic: OS File Systems\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create questions on file system structures and operations."}
+{"prompt":"Goal: Exam-focused planning\nTopic: Compiler Optimizations\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day focused study plan for compiler optimizations."}
+{"prompt":"Goal: Stepwise explanation\nTopic: Lexical Analysis\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain lexical analysis with tokenization examples."}
+{"prompt":"Goal: Knowledge validation\nTopic: ACID Properties\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate conceptual questions on ACID properties."}
+{"prompt":"Goal: Learning prioritization\nTopic: Secure Coding Practices\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day prioritized learning plan for secure coding."}
+{"prompt":"Goal: Core concept learning\nTopic: Event-Driven Architecture\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain event-driven architecture with system examples."}
+{"prompt":"Goal: Conceptual testing\nTopic: Race Conditions\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions testing understanding of race conditions."}
+{"prompt":"Goal: Study flow creation\nTopic: Database Index Optimization\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Design a 3-day study flow for database index optimization."}
+{"prompt":"Goal: Explain internal mechanics\nTopic: Garbage Collection\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain how garbage collection works in managed languages."}
+{"prompt":"Goal: Exam practice\nTopic: CPU Pipelining\nTime available: Not specified","target":"Agent: quiz","Instruction":"Create exam-style questions on CPU pipelining."}
+{"prompt":"Goal: Learning schedule\nTopic: Data Visualization Principles\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Create a 2-day learning schedule on data visualization principles."}
+{"prompt":"Goal: Concept explanation\nTopic: Dimensionality Reduction\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain PCA and other dimensionality reduction methods."}
+{"prompt":"Goal: Knowledge probing\nTopic: Mutex vs Semaphore\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate comparison-based questions on mutex and semaphore."}
+{"prompt":"Goal: Rapid preparation\nTopic: Software Deployment Models\nTime available: 1 day","target":"Agent: scheduler","Instruction":"Prepare a 1-day rapid learning plan for deployment models."}
+{"prompt":"Goal: Explain theoretical foundations\nTopic: Information Theory\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain entropy and information theory basics."}
+{"prompt":"Goal: Self-assessment\nTopic: API Authentication\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on API authentication mechanisms."}
+{"prompt":"Goal: Progressive study\nTopic: Mobile Security\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a progressive 3-day study plan for mobile security."}
+{"prompt":"Goal: Concept walkthrough\nTopic: Transfer Learning\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain transfer learning and its applications."}
+{"prompt":"Goal: Concept testing\nTopic: Cache Memory\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions on cache memory organization."}
+{"prompt":"Goal: Structured revision\nTopic: Software Maintenance\nTime available: 2 days","target":"Agent: scheduler","Instruction":"Design a 2-day revision plan on software maintenance concepts."}
+{"prompt":"Goal: Clear explanation\nTopic: Search Space Reduction\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain search space reduction techniques with examples."}
+{"prompt":"Goal: Exam readiness check\nTopic: Virtual Memory\nTime available: Not specified","target":"Agent: quiz","Instruction":"Generate questions to assess virtual memory understanding."}
+{"prompt":"Goal: Build conceptual foundation\nTopic: Boolean Algebra\nTime available: Not specified","target":"Agent: pedagogy","Instruction":"Explain Boolean algebra laws with truth table examples."}
+{"prompt":"Goal: Exam preparation plan\nTopic: Queueing Theory\nTime available: 3 days","target":"Agent: scheduler","Instruction":"Create a 3-day study plan covering queueing models and metrics."}
